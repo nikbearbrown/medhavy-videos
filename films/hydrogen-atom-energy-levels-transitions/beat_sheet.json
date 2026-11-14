@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "slug": "viz-riff-hydrogen-transitions",
+    "title": "Hydrogen Atom — Energy Levels & Transitions (Viz Riff)",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "Critique the D3 hydrogen energy-level diagram — encodings, interaction, selection-rule honesty",
+    "clock": "narration",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "register": "Teardown",
+    "footer": "@NikBearBrown",
+    "folderLabel": "@NikBearBrown",
+    "build": {
+      "at": "2026-08-28T01:24:51",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "narration_text": "Bonjour. Liam, in for Bear. Someone asked Claude to build a hydrogen energy level diagram — click two levels, get a verdict on the transition. We judge the visualization. Not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "topic": "HYDROGEN TRANSITIONS · VIZ RIFF",
+            "segment": "Judge the Viz, Not the Physics",
+            "command": "write me a D3 visualization of hydrogen atom energy levels and radiative transitions — click any two n,ℓ levels to check the electric-dipole selection rule",
+            "runningText": "generating…",
+            "output": [
+              "✓ Energy level diagram — n = 1–6, ℓ sublevels",
+              "✓ Click two levels — verdict + wavelength",
+              "✓ Log-scale emission spectrum",
+              "✓ Physics checks console"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk — hydrogen transitions ask",
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.94,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the viz",
+      "narration_text": "Left panel: a linear energy axis from minus thirteen-point-six to zero electron-volts. Tick marks for each n-ℓ sublevel, n equals one through six, in four columns — s, p, d, f. Arrows pre-drawn for the major series: Lyman in purple, Balmer color-matched to wavelength, Paschen in dark red. Right: a log-scale emission spectrum from ninety to two-thousand nanometers, and a physics-checks console.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "output.mp4",
+        "cut": [
+          0.0,
+          9.875
+        ]
+      },
+      "new_visual_element": "output.mp4 full clip — baseline diagram, pre-drawn arrows",
+      "estimated_duration_s": 20.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 22.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "the mechanism",
+      "narration_text": "Click a first level, click a second — the sim draws a transition arrow and delivers a verdict: ALLOWED or FORBIDDEN. The info box shows the transition notation, delta-E in eV, wavelength in nm, and the delta-ell value. Clicking four-d then two-p: allowed emission at four-eighty-six nanometers, Hβ. Clicking two-s then one-s: forbidden — delta-ell equals zero. The mechanism the sim enforces is the electric-dipole selection rule: delta-ell must be plus or minus one.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "change.mp4",
+        "cut": [
+          0.0,
+          25.25
+        ]
+      },
+      "new_visual_element": "change.mp4 full clip — click-through showing allowed emission (Hβ, Hα) and forbidden (2s→1s)",
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 27.07,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "what it gets right",
+      "narration_text": "Two things this gets right. First: the two-click structure forces commitment before feedback — the correct structure for teaching a rule. You choose both endpoints before the verdict appears. Second: the log scale on the spectrum. It gives Lyman, Balmer, and Paschen roughly equal horizontal space, matching how the series converge. And when you select Ly-alpha, the info box includes the spontaneous emission lifetime — one-point-six nanoseconds. Data, not decoration.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "change.mp4",
+        "still": 4.3
+      },
+      "new_visual_element": "still from change.mp4 at t=4.3 — 4d→2p info box showing allowed emission verdict",
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 23.34,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "what it gets wrong",
+      "narration_text": "Two things this gets wrong. The energy axis is linear in eV, and hydrogen levels scale as one-over-n-squared. So n equals four, five, and six are squeezed into the top fifteen percent of the diagram — pixel-scale targets. The fix is a one-over-n-squared axis that spaces the levels uniformly. Also: the subtitle announces three selection rules, including delta-m equals zero or plus-minus one. The code checks one of them. A student reading the subtitle thinks m matters. The sim cannot show it. Remove delta-m, or represent m-states.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "output.mp4",
+        "still": 2.0
+      },
+      "new_visual_element": "still from output.mp4 at t=2 — initial state showing crowded n=4–6 levels at top",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 30.19,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "narration_text": "Let's recap with Claude. Useful for upper-division quantum mechanics — the click-two-levels structure is right, the log spectrum is the right call, the info box gives real numbers. Replace the linear axis with a one-over-n-squared scale. Remove the delta-m selection rule from the subtitle — or represent m-states.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Hydrogen Transitions Viz — Critique",
+            "artifactHeading": "Verdict",
+            "artifactLines": [
+              "Click-two-levels: commit before feedback. Strong.",
+              "Log scale on the spectrum: correct call.",
+              "Linear axis crowds n=4–6 into pixels — switch to 1/n².",
+              "Δm in the subtitle, never in the code — remove it."
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeVerdictArtifact — verdict card",
+      "estimated_duration_s": 20.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 17.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "narration_text": "I have a D3 hydrogen energy-level diagram. It plots energy on a linear eV axis, which crowds n=4 through n=6 into the top fifteen percent of the diagram. Rewrite the y-scale to a one-over-n-squared spacing so that n=1 through n=6 are evenly distributed vertically. Keep the existing energy labels in eV at each level, the pre-drawn transition arrows, and the click-two-levels selection-rule interaction. The SVG viewport is three-ninety by five-hundred pixels.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "HYDROGEN TRANSITIONS · YOUR TURN",
+            "segment": "Fix the Axis",
+            "command": "I have a D3 hydrogen energy-level diagram. It plots energy on a linear eV axis, which crowds n=4 through n=6 into the top 15% of the diagram. Rewrite the y-scale to a 1/n² spacing so n=1 through n=6 are evenly distributed vertically. Keep the eV labels at each level, the pre-drawn transition arrows, and the click-two-levels selection-rule interaction. SVG viewport: 390×500 px.",
+            "runningText": "paste into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk — Your Turn prompt to fix the linear y-axis",
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 29.42,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:24:51"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "narration_text": "Hydrogen Atom — Energy Levels and Radiative Transitions.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Hydrogen Atom — Energy Levels & Transitions (Viz Riff)",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeTitleOutro — title re-read",
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 5.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.12,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:24:51"
+      }
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "slug": "viz-riff-partial-trace-heatmap",
+    "title": "Partial Trace — Side-by-Side True, Purity Bar Misleads",
+    "channel": "claude-liam",
+    "channel_title": "@NikBearBrown",
+    "persona": "Liam",
+    "greeting": "Bonjour",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "palette": "claude",
+    "folderLabel": "@NikBearBrown",
+    "register": "Teardown",
+    "skill": "viz-riff",
+    "build": {
+      "at": "2026-08-28T23:41:25",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Bonjour. Liam here, in for Bear. Claude wrote this visualization of the partial trace — two density matrix heatmaps side by side, one slider, the arithmetic of tracing away a qubit playing out live. Today we judge the viz, not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "segment": "Partial Trace — Tracing Away One Qubit",
+            "command": "Hey Claude, write me a visualization for the partial trace of an entangled two-qubit system.",
+            "runningText": "building simulation…",
+            "output": [
+              "✓ Partial Trace — Tracing Away One Qubit Kills All Coherence",
+              "✓ D3 heatmaps: 4×4 joint ρ_AB, 2×2 reduced ρ_A",
+              "✓ θ slider 0°→45°, purity and entropy bars"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 10.0,
+      "actual_duration_s": 14.06,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Three panels. Left: a four-by-four density matrix ρ_AB — sixteen cells, basis labels |00⟩ through |11⟩ on both axes, each cell shaded proportionally with its numerical value printed inside. Center: the two-by-two reduced matrix ρ_A after tracing out qubit B, same encoding. Right: two horizontal bars for purity and entropy, and a static text box. One θ slider at the bottom. A readout strip reads the current numbers.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/output.mp4",
+        "cut": [
+          0,
+          8.083
+        ]
+      },
+      "estimated_duration_s": 8.083,
+      "actual_duration_s": 23.72,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "MECHANISM",
+      "narration_text": "The θ slider drives the state — cosine θ times |00⟩ plus sine θ times |11⟩ — sweeping from the Bell state at 45° toward the product state at 0°. At the Bell state, four cells in ρ_AB light up at 0.500: the two diagonal corners and the two off-diagonal corners at row zero column three and row three column zero. Those are the coherences. Watch the sweep: the coherences in ρ_AB shrink. The off-diagonal cells in ρ_A stay beige — exactly zero — the whole way across. The partial trace sums those coherences away.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/change.mp4",
+        "cut": [
+          0,
+          11.541
+        ]
+      },
+      "estimated_duration_s": 11.541,
+      "actual_duration_s": 32.43,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Two things earn their keep. First: the side-by-side layout. At the Bell state, ρ_AB lights up those off-diagonal coherence cells at 0.500. Scan right to ρ_A: those same positions show exactly zero on beige. Drag the slider anywhere and they stay there. No equation needed — the vanishing is visible, persistent, and unambiguous. Second: the double encoding. Every nonzero cell gets both a shade of ink proportional to its value and the printed number inside. You never guess whether a dark cell is 0.3 or 0.7 — the digit is right there, usable as a fact-check against your own calculation.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/output.mp4",
+        "still": 2.0
+      },
+      "estimated_duration_s": 25.0,
+      "actual_duration_s": 33.79,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three real problems. First: the purity bar maps purity from 0.5 to 1.0, not from 0 to 1 — but those limits are invisible. At the Bell state the bar looks nearly empty. A viewer reads near-zero purity. In reality, 0.5 is the minimum possible purity for any qubit — the bar's left edge is not near-zero, it is maximally mixed. The hidden domain creates a reliable misconception. Second: the state label reads 'partially entangled' for 43 of 45 degrees. From 1° to 44°, the same string — no information across most of the slider range. Third: θ is never defined. The label shows '0° = product state, 45° = Bell state' without the state formula. The parameter is a black box to anyone who doesn't already know it.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/change.mp4",
+        "still": 5.0
+      },
+      "estimated_duration_s": 34.0,
+      "actual_duration_s": 42.33,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The side-by-side panels make the partial trace visible without an equation — ρ_AB's off-diagonals trace away and ρ_A stays diagonal throughout. Worth using. But the purity bar hides its own domain: its left edge is 0.5, not 0, and nowhere is that labeled. Students read maximum entanglement as near-zero purity. Fix the axis first. Best use: right after the trace formula, as a confirmation tool for students who can already read a density matrix.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Viz Verdict",
+            "artifactHeading": "Partial Trace — Tracing Away One Qubit",
+            "artifactLines": [
+              "Side-by-side layout: off-diagonals trace away visibly",
+              "Double encoding: shade + number, no guessing",
+              "Purity bar hides its domain — 0.5 reads as near-zero",
+              "State label: 'partially entangled' for 97% of the range",
+              "θ never defined — formula absent from the layout",
+              "Best use: post-lecture confirmation, not first introduction"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 20.0,
+      "actual_duration_s": 26.71,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "I have a partial trace visualization showing ρ_AB and ρ_A side by side with a θ slider. Two fixes. First: the purity bar maps purity from 0.5 to 1.0 but carries no axis labels — a viewer reads the Bell state as near-zero purity when 0.5 is the minimum possible for a qubit. Add endpoint labels showing 0.5 on the left edge and 1.0 on the right edge of the bar. Second: add a live state formula display below the slider showing psi equals cosine theta times ket 00 plus sine theta times ket 11, with the actual numerical coefficients cos θ and sin θ updated as you drag. Keep the single-file HTML format.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "segment": "Partial Trace — Tracing Away One Qubit",
+            "command": "I have a partial trace visualization showing ρ_AB and ρ_A side by side with a θ slider. Two fixes. First: the purity bar maps purity from 0.5 to 1.0 but carries no axis labels — a viewer reads the Bell state as near-zero purity when 0.5 is the minimum possible for a qubit. Add endpoint labels showing 0.5 on the left edge and 1.0 on the right edge of the bar. Second: add a live state formula display below the slider showing |ψ⟩ = cos θ |00⟩ + sin θ |11⟩, with the actual numerical coefficients updated as you drag. Keep the single-file HTML format.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 30.0,
+      "actual_duration_s": 39.02,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:41:25"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Partial Trace — Side-by-Side True, Purity Bar Misleads. Liam, for Bear. At NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Partial Trace — Side-by-Side True, Purity Bar Misleads",
+            "handle": "@NikBearBrown",
+            "slug": "viz-riff-partial-trace-heatmap"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 6.0,
+      "actual_duration_s": 6.1,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:41:25"
+      }
+    }
+  ]
+}

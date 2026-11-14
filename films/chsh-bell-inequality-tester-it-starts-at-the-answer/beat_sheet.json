@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "slug": "viz-riff-chsh-explorer",
+    "title": "CHSH Bell Inequality Tester — It Starts at the Answer",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "series": "Viz Riff — Quantum Mechanics",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "greeting": "Ciao",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "palette": "claude",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "clock": "narration",
+    "build": {
+      "at": "2026-08-25T09:58:16",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Ciao. Liam, in for Bear. One Claude prompt, and back comes a CHSH Bell inequality tester — four angle sliders, an S meter, and a polar dial. Today we are not here to learn Bell inequalities. We are here to judge whether this visualization helps you learn them.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for a CHSH Bell inequality tester.",
+            "segment": "CHSH Bell Inequality Tester — Viz Riff",
+            "greeting": "Ciao, Liam",
+            "runningText": "generating CHSH explorer…",
+            "output": [
+              "✓ CHSH Bell Inequality Tester — singlet state",
+              "✓ four measurement-angle sliders, S meter",
+              "✓ LHV ±2 and Tsirelson ±2√2 both marked"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 14.91,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two panels. Left: four angle sliders — Alice's a₁ and a₂, Bob's b₁ and b₂, each zero to three-sixty. A large S value on a red background. A correlator grid. Three buttons. Right: a circular polar dial, four arrows — red for Alice, blue for Bob.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "screen",
+        "treatment": "none"
+      },
+      "media": {
+        "cut": [
+          0,
+          6
+        ],
+        "cut_source": "media/output.mp4"
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 14.85,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "A₁ sweeps from zero to three-sixty. The formula: E of a-b equals negative cosine of the angle difference — the singlet correlator. S is the signed sum: three E values added, the fourth subtracted. Watch the meter needle cross the LHV bound at ±2 and push toward the Tsirelson wall at ±2-root-2. The 45-degree-spaced configuration is the maximum — the geometry behind the violation.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "screen",
+        "treatment": "none"
+      },
+      "media": {
+        "cut": [
+          0,
+          10
+        ],
+        "cut_source": "media/change.mp4"
+      },
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 23.45,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "What the sim gets right starts with the violation indicator. The red background flood on the S meter converts an abstract threshold into a spatial state change — you cannot miss it. The polar chart earns its keep too: red versus blue for Alice versus Bob, solid versus dashed for the first angle versus the second. Four quantities tracked with two visual channels. And the meter bar marks both bounds in the same strip — LHV ±2 in red, Tsirelson ±2√2 in dashed blue — so a student sees the gap between classical and quantum at a glance.",
+      "shot": {
+        "type": "STILL",
+        "source": "own",
+        "motion": "hold",
+        "treatment": "none"
+      },
+      "estimated_duration_s": 38.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 30.95,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Now the problems. Default state: the Tsirelson maximum, S equals −2.828. The subtitle says 'find the configuration that beats 2' — but it is found at load time. Discovery is spoiled. Correct default: All-Equal, S equals zero. Second: the S formula is nowhere on screen. The four correlators are live, but the sign flip on the last term is invisible — no label, no annotation. Third: the polar chart shows absolute angles, not the four angle-differences that actually drive S. You cannot see the 45-degree gaps from the chart without mental arithmetic. And the Random Search button frames this as guessing, not the geometric consequence it actually is.",
+      "shot": {
+        "type": "STILL",
+        "source": "own",
+        "motion": "hold",
+        "treatment": "none"
+      },
+      "estimated_duration_s": 42.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 36.31,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Let's recap with Claude. This sim does one thing well — the violation indicator is immediate and unavoidable. But it opens at the Tsirelson maximum, hides the formula's sign structure, and shows absolute angles when angle-differences are what matter. Best used as a check-your-prediction tool after the math — not a discovery tool before it. The one fix that matters: start at zero, not at the answer.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "CHSH Bell Inequality Tester",
+            "artifactHeading": "Riff Verdict",
+            "artifactLines": [
+              "Opens at the Tsirelson maximum — the answer, not the question",
+              "Sign flip on E(a₂,b₂) invisible: S formula never shown",
+              "Polar chart shows absolute angles, not the four interacting pairs",
+              "Use after the math — not as a first introduction"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 20.35,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "I have a CHSH Bell inequality tester in a single-file D3.js HTML file. Two changes: one — change the default opening state from the optimal configuration, a₁=0, a₂=90, b₁=45, b₂=315, to All-Equal, all four angles at zero. The student starts at S equals zero and discovers the violation by dragging. Add a brief comment marking this as the discovery start. Two — add an inline label below the correlator grid showing the S formula: S equals E of a₁b₁ plus E of a₁b₂ plus E of a₂b₁ minus E of a₂b₂. Render the minus sign in red so the sign flip is visible. Keep the single-file format and the D3 CDN — no new dependencies.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Take this single-file CHSH Bell tester: (1) change default opening state to All-Equal (S=0, discovery start); (2) add a formula label S = E(a₁,b₁) + E(a₁,b₂) + E(a₂,b₁) − E(a₂,b₂) below the correlator grid, with the minus sign in red. Single-file, D3 CDN.",
+            "segment": "CHSH Bell Inequality Tester — Viz Riff",
+            "greeting": "Your turn.",
+            "runningText": "paste into Claude",
+            "output": []
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 42.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 41.94,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T09:58:16"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "CHSH Bell Inequality Tester — it starts at the answer. Liam. At NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "CHSH Bell Inequality Tester — It Starts at the Answer",
+            "handle": "@NikBearBrown",
+            "slug": "viz-riff-chsh-explorer"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 6.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 5.85,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T09:58:16"
+      }
+    }
+  ]
+}

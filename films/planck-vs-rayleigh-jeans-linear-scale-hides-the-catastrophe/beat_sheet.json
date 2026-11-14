@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "slug": "viz-riff-planck-vs-rj",
+    "title": "Planck vs Rayleigh-Jeans — Linear Scale Hides the Catastrophe",
+    "topic": "@NikBearBrown",
+    "purpose": "viz-riff critique of vol1-planck-vs-rj.html — judges the visualization, not the physics",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "skill": "viz-riff",
+    "build": {
+      "at": "2026-08-25T17:49:28",
+      "cut": "review",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Ciao, Liam. I'm Liam, in for Bear. Someone asked Claude to build a visualization of the Planck versus Rayleigh-Jeans blackbody spectrum — the UV catastrophe. Claude returned a two-panel D3 simulation. Today we judge the visualization, not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "write me a visualization of the Planck vs Rayleigh-Jeans blackbody spectrum",
+            "greeting": "Ciao, Liam",
+            "segment": "Planck vs Rayleigh-Jeans — UV Catastrophe",
+            "runningText": "Hey Claude, write me a visualization for the Planck vs Rayleigh-Jeans blackbody spectrum.",
+            "output": [
+              "✓ Planck vs Rayleigh-Jeans Blackbody Spectrum",
+              "✓ T slider 1000–10000 K",
+              "✓ ratio panel: Planck / RJ"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 14.74,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Two panels. Left: spectral energy density, linear Y-axis in scientific notation. Planck curve solid ink. Rayleigh-Jeans dashed red. A gray dashed line marks the Wien peak. Right panel: the Planck-to-Rayleigh-Jeans ratio on a zero-to-one scale. One slider for temperature — one thousand to ten thousand Kelvin. One dropdown to switch the x-axis between frequency and wavelength. That is the full inventory.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0,
+          7
+        ]
+      },
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 22.14,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "Drag temperature from one thousand to ten thousand Kelvin. Both panels update. The Planck peak shifts right — Wien's law, peak frequency proportional to T. The x-axis auto-scales to keep that peak in frame at every temperature. Rayleigh-Jeans is always above Planck, always clipped at the top of the plot, always labeled RJ goes to infinity. The ratio panel barely changes shape — that is because x equals h-nu over k-B-T, and temperature cancels. The suppression is temperature-independent in shape.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0,
+          10
+        ]
+      },
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 27.01,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Two things this visualization does correctly. First: the companion ratio panel. It isolates the quantum correction factor on a zero-to-one scale, so the suppression is a visible number, not a squinting contest between two curves. The readout says ten-to-the-minus-twenty at UV — that magnitude is in the display, not buried in a footnote. Second: the domain auto-scales with temperature in frequency mode. The Wien peak is always on screen, at every temperature from one thousand to ten thousand Kelvin. A fixed domain would lose the peak off the right edge at high temperature.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "still": 3.0
+      },
+      "estimated_duration_s": 27.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 30.4,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "The main panel uses a linear Y-axis. That forces Rayleigh-Jeans to be clipped at just over the Planck peak. On screen, the two curves look almost identical — only the clip edge and the RJ-goes-to-infinity label reveal the divergence. The ten-to-the-minus-twenty magnitude is in the readout text, not in the visual shape. A log Y-axis would make both curves simultaneously visible, with Rayleigh-Jeans shooting upward with the correct visual weight. The ratio panel is also linear — the exponential suppression curve immediately hugs the bottom, and the structure of how fast it falls is invisible. Finally: switching the x-axis from frequency to wavelength applies a Jacobian coordinate change with no explanation. A student will believe the physics changed.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "still": 8.0
+      },
+      "estimated_duration_s": 35.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 40.28,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The two-panel design is the right call — the ratio panel is where the argument lives. But the linear Y-axis on the main panel makes the ultraviolet catastrophe look like a mild discrepancy. The ten-to-the-minus-twenty is in the readout, not in the image. A log Y-axis changes that. Best used after deriving the Planck formula, not as the introduction to the catastrophe.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "Planck vs Rayleigh-Jeans",
+            "artifactLines": [
+              "Two-panel design: ratio panel isolates the quantum correction factor",
+              "Linear Y-axis clips Rayleigh-Jeans — catastrophe magnitude is in text, not image",
+              "Ratio panel also linear: exponential suppression structure disappears",
+              "Use after deriving Planck — not as the introduction to the catastrophe"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 21.08,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Take this Planck versus Rayleigh-Jeans simulation and make one change: replace the linear Y-axis on the spectral energy density panel with a logarithmic scale. Keep both curves on the same plot so the Rayleigh-Jeans divergence is visible rather than clipped. Then add a one-line note below the ratio panel explaining that Planck-over-RJ is the Bose-Einstein quantum correction factor, x divided by open-paren e-to-the-x minus one close-paren, where x equals h-nu over k-B-T. Finally, add a second annotation: at what temperature does the ratio drop below one-half at visible-light frequencies?",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Take this Planck vs Rayleigh-Jeans simulation and make one change: replace the linear Y-axis with a log scale. Keep both curves on the same plot. Then add a note below the ratio panel: Planck/RJ is the Bose-Einstein factor x/(e^x − 1), x = hν/kBT. Finally: at what temperature does the ratio drop below 0.5 at visible-light frequencies?",
+            "greeting": "Your turn.",
+            "segment": "YOUR TURN",
+            "runningText": "Take this Planck vs Rayleigh-Jeans simulation and make one change: replace the linear Y-axis with a log scale. Keep both curves on the same plot. Then add a note below the ratio panel: Planck/RJ is the Bose-Einstein factor x/(e^x − 1), x = hν/kBT. Finally: at what temperature does the ratio drop below 0.5 at visible-light frequencies?",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 30.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 33.34,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:49:28"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Planck vs Rayleigh-Jeans — Linear Scale Hides the Catastrophe. Liam, at NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Planck vs Rayleigh-Jeans — Linear Scale Hides the Catastrophe",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 6.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 6.04,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:49:28"
+      }
+    }
+  ]
+}

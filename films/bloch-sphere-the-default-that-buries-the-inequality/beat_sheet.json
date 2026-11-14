@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "slug": "viz-riff-bloch-sphere",
+    "title": "Bloch Sphere — The Default That Buries the Inequality",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "viz-riff critique: Bloch sphere qubit visualization — Born rule encoding is honest; Robertson bound is trivially zero on first load because the default state sits on the xz-plane",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "build": {
+      "at": "2026-08-28T01:17:48",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Ciao. Liam, in for Bear. Someone asked Claude to write a Bloch sphere visualization — qubit state, Born rule bars, Robertson uncertainty panel. Today we are judging the visualization. The quantum mechanics gets a pass.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the Bloch sphere with qubit state controls and Robertson uncertainty.",
+            "greeting": "Ciao, Liam",
+            "segment": "Bloch Sphere",
+            "runningText": "building Bloch sphere sim…",
+            "output": [
+              "✓ Bloch sphere SVG — orthographic AZ=30° EL=25°",
+              "✓ θ/φ sliders → Born rule P(|0⟩) = cos²(θ/2)",
+              "✓ Robertson bound Δσ_x · Δσ_z ≥ |⟨σ_y⟩| — live"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "estimated_duration_s": 14.0,
+      "actual_duration_s": 12.78,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Two columns. Left: a Bloch sphere in fixed orthographic projection, a red state-vector arrow, two dashed projection lines, two range sliders — theta and phi. Right: four panels. Born rule probabilities as live horizontal bar charts. The Bloch vector components to four decimal places. A Robertson uncertainty section with a ratio field. And a dark terminal called the Physics Console.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          6
+        ],
+        "file": "output.mp4"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "estimated_duration_s": 22.0,
+      "actual_duration_s": 21.35,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "MECHANISM",
+      "narration_text": "Drag theta from zero to one hundred eighty. At zero, the arrow points to the north pole — P of zero equals one, P of one equals zero. At ninety degrees, the bars split fifty-fifty. At one-eighty, south pole, probabilities flip. The Born rule is P of zero equals cosine-squared of theta over two. The slider IS that formula, updating in real time.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          9
+        ],
+        "file": "change.mp4"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "estimated_duration_s": 22.0,
+      "actual_duration_s": 19.43,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "What it gets right. First: the Born rule formula is printed on screen beside the value it produces. The equation and the bar that instantiates it share the same frame — nothing requires looking up. Second: the Robertson inequality holds to machine precision everywhere on the sphere. At phi ninety, theta ninety — the plus-y state — the ratio column reads 1.0000, and a green checkmark confirms it. Equality is not claimed in prose; it is a reachable event the student can trigger. Third: the Physics Console lists five named checks with expected values at load. Students can read what the sim was tested against.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 6,
+        "file": "change-phi.mp4"
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "estimated_duration_s": 32.0,
+      "actual_duration_s": 33.88,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Two problems, both fixable. One: the default state is theta ninety, phi zero — the plus-x state, on the xz-plane. The Robertson panel opens showing zero greater than zero, labeled trivial. That is the least interesting Robertson scenario: the bound is vacuous because the commutator's expectation vanishes at phi zero and phi one-eighty. A student who never discovers the phi slider never sees a non-trivial inequality. The fix is one line: default phi to ninety degrees so the sim opens on the plus-y state and the ratio greets every visitor at 1.0000. Two: the Physics Console runs once at page load, then freezes. Drag the sliders; the console still shows the initial-state checks. It calls itself a physics checker but stops checking after second zero.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 1,
+        "file": "output.mp4"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "estimated_duration_s": 38.0,
+      "actual_duration_s": 42.99,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Born rule formula visible on screen alongside its bar — equation and value share one frame. Robertson equality demonstrable and reachable at phi ninety. Default phi-zero opens a trivial zero-greater-than-zero bound — the inequality is invisible on first load. Physics Console frozen at page-load, does not track live slider state. Useful for a lecture that has already introduced the Bloch sphere; not a self-paced first encounter.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Bloch Sphere Visualization",
+            "artifactHeading": "Riff Verdict",
+            "artifactLines": [
+              "Born rule formula on screen beside its bar — equation and value in one frame",
+              "Robertson equality demonstrable at θ=90°, φ=90° — ratio reaches 1.0000",
+              "Default φ=0° opens a trivial 0≥0 bound — inequality invisible on first load",
+              "Physics Console frozen at page-load — does not track live slider state"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "estimated_duration_s": 25.0,
+      "actual_duration_s": 24.3,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "I built an interactive Bloch sphere simulation in single-file HTML using D3. It has theta and phi sliders, Born rule probability bars, a Bloch vector panel, and a Robertson uncertainty section computing Δσ_x · Δσ_z ≥ |⟨σ_y⟩|. Two fixes needed. One: change the default state from theta ninety phi zero to theta ninety phi ninety — the plus-y state — so the Robertson bound opens at ratio 1.0000 instead of the trivial zero-greater-than-zero case. Two: wire the physics-check function to both slider input events so the Physics Console updates on every move rather than running once at page load.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I built an interactive Bloch sphere simulation in single-file HTML using D3. It has theta and phi sliders, Born rule probability bars, a Bloch vector panel, and a Robertson uncertainty section computing Δσ_x · Δσ_z ≥ |⟨σ_y⟩|. Two fixes needed. One: change the default state from theta ninety phi zero to theta ninety phi ninety — the plus-y state — so the Robertson bound opens at ratio 1.0000 instead of the trivial zero-greater-than-zero case. Two: wire the physics-check function to both slider input events so the Physics Console updates on every move rather than running once at page load.",
+            "greeting": "Your turn.",
+            "segment": "Bloch Sphere",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "estimated_duration_s": 38.0,
+      "actual_duration_s": 39.21,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:17:48"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Bloch Sphere — The Default That Buries the Inequality. At NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Bloch Sphere — The Default That Buries the Inequality",
+            "slug": "viz-riff-bloch-sphere",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "estimated_duration_s": 5.0,
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 4.63,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T01:17:48"
+      }
+    }
+  ]
+}

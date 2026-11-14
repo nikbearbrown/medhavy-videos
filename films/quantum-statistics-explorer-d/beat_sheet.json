@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "slug": "viz-riff-quantum-statistics-explorer",
+    "title": "Quantum Statistics Explorer — Viz Riff",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "Critique the Fermi-Dirac / Bose-Einstein / Maxwell-Boltzmann D3 viz from quantum-mechanics-a-companion-guide",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-25T12:35:48",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Bonjour. I'm Liam, in for Bear. Someone asked Claude to draw all three quantum statistics distributions on one chart. This is what came back. We're judging the visualization, not the physics.",
+      "estimated_duration_s": 13.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "command": "Hey Claude, write me a visualization for quantum statistics — Fermi-Dirac, Bose-Einstein, and Maxwell-Boltzmann on one log-scale chart.",
+            "segment": "Quantum Statistics Explorer",
+            "runningText": "writing visualization…",
+            "output": [
+              "✓ Fermi-Dirac vs Bose-Einstein vs Maxwell-Boltzmann",
+              "✓ log-scale occupation number — 5 decades",
+              "✓ temperature and μ sliders wired"
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "claude-sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 10.9,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "One chart. X-axis: energy in eV, zero to five. Y-axis: mean occupation number, logarithmic, from one-thousandth to one hundred. Three curves: FD in black, BE in red, MB in dashed gray. A dashed vertical line marks μ. A dashed horizontal at occupation one is labeled half-fill FD. Two sliders above: Temperature from 300 to 8000 Kelvin, Chemical Potential from half to three and a half eV. A data box to the right reports the three values at a probe fixed at μ plus half an eV.",
+      "estimated_duration_s": 32.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT media/output.mp4 — baseline T=1500K μ=2.0eV",
+      "actual_duration_s": 28.91,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Drag T from 300 Kelvin to 8000. At 300K, kT is 0.026 eV — a tiny fraction of μ. The FD curve is nearly a Heaviside step: occupation one below μ, zero above. BE spikes toward infinity near μ, while MB decays exponentially. As T rises and kT grows, the step broadens, the spike flattens, all three start converging in the classical high-energy tail. The prediction before you drag: the FD crossing at occupation one-half is pinned to E equals μ at every temperature. The half-fill line never moves.",
+      "estimated_duration_s": 35.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT media/change.mp4 — T slider sweep 300→8000K",
+      "actual_duration_s": 31.94,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three wins. First: the log scale is the argument. Linear would compress the classical tail to invisibility while the BE spike dominated. Log gives all five decades equal vertical space — the step, the spike, and the exponential tail are simultaneously legible. Second: the μ vertical line places the FD half-occupation and the BE near-divergence at the same x-position. One anchor, two phenomena — that is the sign-in-denominator story visible without words. Third: the live kT readout ties the thermal energy number to the visible step width. As T rises, kT appears in the strip and the FD step broadens to match. You can watch the correlation without arithmetic.",
+      "estimated_duration_s": 40.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "Freeze: media/B03.png — T=700K, near-step FD with BE peak near μ",
+      "actual_duration_s": 36.71,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three problems. One: the BE clipping. The code caps mean occupation at 50 with no annotation, and the y-axis runs to 100. At low T the BE curve hits the top of the plot with no indicator — no arrow, no disclosure. The divergence near μ is the point of Bose-Einstein statistics. Silencing it silently is the worst possible truncation choice. Two: the info box says 'At high T: all three converge to Maxwell-Boltzmann' at every temperature — including 8000 Kelvin, where the probe reads FD 0.33, BE 0.94, MB 0.48. BE is twice MB at maximum slider value. That is not convergence. The note is conditionally true but looks like a live status message. Three: the legend shows filled circles for all three curves, but MB is a dashed line. The dashed encoding marks MB as the classical reference. The legend erases that distinction.",
+      "estimated_duration_s": 50.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "Freeze: media/B04.png — T=8000K max, info box showing BE=0.94 MB=0.48 with 'converge' note",
+      "actual_duration_s": 46.98,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Let's recap with Claude. Log scale makes the physics legible across five decades. The μ line anchors the step and the spike in the same visual argument. But the BE clipping has no annotation — a student sees a curve that stops and cannot distinguish truncation from physics. And the convergence note contradicts the probe values at maximum temperature. Use this before the quantum statistics derivation. Set T to 300 Kelvin first, ask the class to predict which curve moves and how as T rises, then sweep. Fix the BE clipping annotation before you show it.",
+      "estimated_duration_s": 37.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Quantum Statistics Explorer — Verdict",
+            "artifactHeading": "Viz Riff",
+            "artifactLines": [
+              "Log scale gives FD step, BE spike, and classical tail equal legibility across 5 decades",
+              "μ vertical line anchors FD half-occupation and BE divergence in one visual mark",
+              "BE divergence clipped at ⟨n⟩=50 with no annotation",
+              "'Converge to MB' note shows at 8000K where BE = 2× MB at the probe",
+              "Use before the derivation; fix the BE clipping annotation first"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 29.82,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "I have a D3 interactive visualization of the three quantum statistics distributions — Fermi-Dirac, Bose-Einstein, and Maxwell-Boltzmann — plotted on a log-scale y-axis over energy from 0 to 5 electron-volts. Three issues to fix. First: the Bose-Einstein curve is silently capped at mean occupation 50 with Math.min of v and 50. Add a visible annotation — a dashed horizontal at 50 labeled BE clipped — so the truncation is disclosed. Second: the info box displays 'At high T: all three converge to MB' at every temperature. Replace this with a conditional note shown only when the probe ratio, E minus μ divided by kT, is greater than 3. Third: the legend shows filled circles for all three distributions, but Maxwell-Boltzmann is a dashed line. Replace the legend circles with short line segments that preserve each curve's stroke and dash pattern. Do not change the formulas, axes, or sliders.",
+      "estimated_duration_s": 55.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "segment": "Quantum Statistics Explorer",
+            "command": "I have a D3 interactive visualization of the three quantum statistics distributions — Fermi-Dirac, Bose-Einstein, and Maxwell-Boltzmann — plotted on a log-scale y-axis over energy from 0 to 5 electron-volts. Three issues to fix. First: the Bose-Einstein curve is silently capped at mean occupation 50 with Math.min(v, 50). Add a visible annotation — a dashed horizontal at 50 labeled 'BE clipped' — so the truncation is disclosed. Second: the info box displays 'At high T: all three converge to MB' at every temperature. Replace this with a conditional note shown only when the probe ratio (E-μ)/kT is greater than 3. Third: the legend shows filled circles for all three distributions, but Maxwell-Boltzmann is a dashed line. Replace the legend circles with short line segments that preserve each curve's stroke and dash pattern. Do not change the formulas, axes, or sliders.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 48.92,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T12:35:48"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "tail_silence_s": 1.0,
+      "narration_text": "Quantum Statistics Explorer — Viz Riff. At NikBearBrown.",
+      "estimated_duration_s": 5.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Quantum Statistics Explorer — Viz Riff",
+            "slug": "viz-riff-quantum-statistics-explorer",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 4.14,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T12:35:48"
+      }
+    }
+  ]
+}

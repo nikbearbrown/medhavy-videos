@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "slug": "viz-riff-exchange-pauli-node",
+    "title": "Exchange Symmetry & Pauli Exclusion Node — Viz Riff",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "Critique the exchange symmetry / Pauli exclusion D3 viz from quantum-mechanics-vol2",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-27T00:12:44",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Hola. I'm Liam, in for Bear. Someone asked Claude to write a visualization of exchange symmetry — two identical particles in a quantum box. This is what came back. We are judging the visualization, not the physics.",
+      "estimated_duration_s": 11.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hola, Liam",
+            "command": "Hey Claude, write me a visualization for exchange symmetry and Pauli exclusion in a 1D box.",
+            "segment": "Exchange Symmetry & Pauli Exclusion Node",
+            "runningText": "writing visualization…",
+            "output": [
+              "✓ Exchange Symmetry & Pauli Exclusion Node",
+              "✓ Pauli exclusion node in 2D heatmap",
+              "✓ boson / fermion toggle wired"
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "claude-sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 12.37,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two panels. Left: a 2D heatmap of joint probability density — x₁ over L and x₂ over L, white to red color scale, a fermion-boson toggle at the top. Right: an energy level diagram with an exchange-K slider, two colored energy bars, a reference line, and a console showing three physics assertions labeled P1, P2, and P3.",
+      "estimated_duration_s": 14.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT media/output.mp4 — baseline fermion mode K=0.20",
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 19.69,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Toggle from fermion to boson: probability moves from two off-diagonal blobs onto the diagonal — fermionic exclusion flips to bosonic bunching. Then the K slider: moving it shifts E₊ and E₋ apart by 2K on either side of the Coulomb reference. The question to answer before clicking: which state lands lower when K is positive?",
+      "estimated_duration_s": 15.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT media/change-toggle.mp4 — fermion→boson click-through",
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.37,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three wins. First: the Pauli exclusion node is a literal absence — the white diagonal in fermion mode is exactly where ψ₋ of x-comma-x equals zero, and P1 verifies this numerically to machine precision. Second: the three correlation values — 0.1682 for fermions, 0.0384 for bosons, 0.1033 for distinguishable particles — tell the exchange story in one row of numbers. Symmetrization pushes particles apart or together, past the uncorrelated baseline in both directions. Third: the A-B toggle does the comparison work without animation. One click.",
+      "estimated_duration_s": 22.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "Freeze: media/B03.png — fermion heatmap still, K=0.20",
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 35.03,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three problems. One: P3 fails at the default K of 0.20 and at every non-zero K — because the inequality in the code is inverted. E₊ is defined as E₁ plus E₂ plus J plus K, so for positive K the fermionic triplet sits lower. That is physically correct. But P3 checks E₊ is less than E₋, which is the opposite. A student's first interaction with this sim: red fail on a working dashboard. Two: the colorbar labels only zero and max — and max is renormalized per mode. Bosons and fermions are not on the same scale. You cannot compare absolute densities across the toggle. Three: the K slider and the heatmap sit in parallel columns, implying they couple. They do not. K never calls the heatmap redraw. The spatial wavefunction is fixed at n equals one and n equals two regardless of K.",
+      "estimated_duration_s": 32.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "Freeze: media/B04.png — full sim view, P3 FAIL visible in console",
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 43.14,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Let's recap with Claude. The heatmap toggle delivers the exclusion node argument — you see exchange symmetry working. The correlation numbers tell the story in three values. But P3 always fails at the default, which poisons the first impression. The one fix: invert the P3 inequality. Use this visualization before the symmetrization lecture to ask the question before giving the derivation. Not after — the energy panel is misleading until P3 is fixed.",
+      "estimated_duration_s": 18.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Exchange Symmetry & Pauli Exclusion Node — Verdict",
+            "artifactHeading": "Viz Riff",
+            "artifactLines": [
+              "Heatmap toggle nails the exclusion node vs bunching contrast in one click",
+              "Correlation values 0.1682 / 0.0384 / 0.1033 tell the exchange story in one row",
+              "P3 check inverted — fails at every K ≠ 0",
+              "Colorbar max renormalized per mode — fermion and boson densities not comparable",
+              "Use before symmetrization lecture, not after — and fix P3 first"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 23.56,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "I have a D3 visualization of exchange symmetry in a 1D infinite square well. There is a bug in physics check P3: it checks whether E₊ is less than E₋ for positive K, but the formula defines E₊ equals E₁ plus E₂ plus J plus K, so E₊ is greater than E₋ when K is positive. Fix the P3 inequality so it passes correctly at the default K of 0.20. Then: first, add a numeric label to the colorbar so the peak density value is visible and comparable across fermion and boson modes. Second, add a note near the K slider clarifying that K shifts energy levels only — it does not affect the spatial wavefunctions shown in the heatmap.",
+      "estimated_duration_s": 28.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "segment": "Exchange Symmetry & Pauli Exclusion Node",
+            "command": "I have a D3 visualization of exchange symmetry in a 1D infinite square well. There is a bug in physics check P3: it checks whether E₊ is less than E₋ for positive K, but the formula defines E₊ equals E₁ plus E₂ plus J plus K, so E₊ is greater than E₋ when K is positive. Fix the P3 inequality so it passes correctly at the default K of 0.20. Then: first, add a numeric label to the colorbar so the peak density value is visible and comparable across fermion and boson modes. Second, add a note near the K slider clarifying that K shifts energy levels only — it does not affect the spatial wavefunctions shown in the heatmap.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 38.12,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:12:44"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "tail_silence_s": 1.0,
+      "narration_text": "Exchange Symmetry and Pauli Exclusion Node — Viz Riff. At NikBearBrown.",
+      "estimated_duration_s": 5.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Exchange Symmetry & Pauli Exclusion Node — Viz Riff",
+            "slug": "viz-riff-exchange-pauli-node",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.91,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:12:44"
+      }
+    }
+  ]
+}

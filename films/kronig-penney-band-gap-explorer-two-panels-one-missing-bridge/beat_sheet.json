@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "slug": "viz-riff-kronig-penney-bands",
+    "title": "Kronig-Penney Band Gap Explorer — Two Panels, One Missing Bridge",
+    "topic": "CLAUDE · VIZ RIFF",
+    "series": "Viz Riff — Quantum Mechanics",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "audience": "Practitioners",
+    "clock": "narration",
+    "build": {
+      "at": "2026-08-26T23:09:12",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Ciao. This is Liam, in for Bear. We asked Claude for a Kronig-Penney band structure explorer — two D3 panels, two sliders, live physics checks. Today we judge the visualization, not the physics it teaches.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the Kronig-Penney band model.",
+            "topic": "Kronig-Penney Band Gap Explorer",
+            "segment": "Viz Riff",
+            "greeting": "Ciao, Liam",
+            "runningText": "building band gap explorer…",
+            "output": [
+              "✓ Kronig-Penney Band Gap Explorer",
+              "✓ D3.js from CDN — no build step",
+              "✓ two panels: KP function + reduced-zone bands",
+              "✓ P and a sliders wired"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 12.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 12.29,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "The sim opens on two D3 panels. Left: the KP function f of qa plotted against qa from zero to four pi — a red curve, pale red shading where the curve escapes the dashed plus-one minus-one corridor. Right: the reduced-zone band structure — energy in electron-volts against the Bloch wavevector, normalized to pi over a. Red band curves. A gray dashed free-electron parabola. Horizontal gap shading. Sidebar: two sliders for the barrier strength P and the lattice constant a, a live Band Info panel with gap width and center in eV, and three Physics Check icons.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "estimated_duration_s": 10.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 32.49,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "P is the barrier strength slider — it runs from zero to twenty. Sweep it from three to twenty. On the left, the f-of-qa oscillation grows: more of the red curve escapes the plus-minus-one corridor. On the right, the gap shading expands — bands compress, gaps widen. At P equals twenty, the model is approaching the tight-binding limit, where electrons are nearly localized to individual wells. The two panels update together. That simultaneous update is the visualization's argument.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "estimated_duration_s": 12.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 26.3,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three things the visualization gets right. First: the two-panel layout. Left panel shows the constraint — where f of qa escapes the corridor, no Bloch state can exist. Right panel shows the consequence — energy gaps. This is the KP argument made geometric. Second: the plus-minus-one dashed lines. The allowed-forbidden threshold is drawn as a literal corridor the curve must stay inside. No memorization required. Third: the free-electron parabola stays visible throughout as gray dashes. As P grows, the student watches the real bands diverge from the parabola — building intuition for what periodic potential does to a free electron.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 35.11,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three things the visualization hides. First: P is dimensionless — P equals mV-zero times b times a over h-bar squared — but the slider just shows three-point-zero. No formula. No example material. Students move a magic knob. Second: there is no visual bridge between the two panels. Both panels update together, but nothing links a specific escape in the f-of-qa curve to the corresponding gap in band structure. That connection is the entire argument, and the viz leaves students to infer it. Third: the Physics Checks use three states — check, cross, and circle — and never explain that circle means inactive. At the default settings, all three show circle. Students cannot tell whether those conditions passed, failed, or were never tested.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "estimated_duration_s": 20.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 38.95,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The two-panel layout is the correct pedagogical move — it makes the KP constraint and its consequence visible at the same time. But the P slider needs a formula, and the two panels need a visual link. Use this sim after deriving the band gaps analytically, not before — the visualization confirms and explores; it does not discover. The one fix that matters most: one connector line, from a selected point on the f-of-qa curve into the corresponding energy on the band structure. That bridge would complete the argument.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Kronig-Penney Band Gap Explorer",
+            "artifactHeading": "Verdict",
+            "artifactLines": [
+              "Two synchronized panels — the constraint and its consequence shown at once.",
+              "P = magic knob. No formula, no material, no units.",
+              "Panels update together — but no visual bridge connects them.",
+              "Use it AFTER deriving the gaps, not to discover them."
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 29.46,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Here is the prompt: I have a Kronig-Penney Band Gap Explorer. Fix two things. One: the P slider shows a bare number. Add an annotation showing P equals mV-zero times b times a over h-bar squared — dimensionless — and map P equals three to a realistic material, such as a GaAs-AlGaAs-style barrier. Two: add a click interaction. When a user clicks a point on the f-of-qa curve, draw a horizontal dashed line to the corresponding energy in the band structure panel. Keep the single-file D3 format. End prompt. The formula annotation gives the slider physical meaning. The connector line completes the argument. Two edits — two missing things found. Run this in your session.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a Kronig-Penney Band Gap Explorer. Fix two things. (1) P slider shows a bare number — add an annotation showing P = mV₀ba/ħ² (dimensionless) and map P=3 to a realistic material (e.g., GaAs/AlGaAs-style barrier). (2) Add a click interaction: when a user clicks a point on the f(qa) curve, draw a horizontal dashed line to the corresponding energy in the band structure panel. Keep the single-file D3 format.",
+            "topic": "Kronig-Penney Band Gap Explorer",
+            "segment": "Your Turn",
+            "greeting": "Your turn.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 37.57,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:09:12"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Kronig-Penney Band Gap Explorer — Two Panels, One Missing Bridge. Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Kronig-Penney Band Gap Explorer — Two Panels, One Missing Bridge",
+            "slug": "viz-riff-kronig-penney-bands",
+            "mascotAnimation": "wave",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 6.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 5.38,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:09:12"
+      }
+    }
+  ]
+}

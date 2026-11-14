@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "slug": "viz-riff-fermis-golden-rule",
+    "title": "Fermi's Golden Rule — Riff on the Viz",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "series": "Claude for Physics — Viz Riff",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "clock": "narration",
+    "build": {
+      "at": "2026-08-28T00:50:53",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Ciao, Liam — in for Bear. A physics student asks: build me a visualization of Fermi's Golden Rule. Claude hands one back. We are not here to learn the physics — we are here to judge whether this visualization earns it.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for Fermi's Golden Rule — transition probability.",
+            "segment": "Fermi's Golden Rule",
+            "greeting": "Ciao, Liam",
+            "runningText": "building visualization…",
+            "output": [
+              "✓ Fermi's Golden Rule — Transition Probability",
+              "✓ sinc² spectrum + time-evolution panels",
+              "✓ TIME T and density-of-states sliders",
+              "✓ physics-checks console"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 8.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 11.78,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Here is what loaded. Title: Fermi's Golden Rule — Transition Probability. The formula is in the subtitle. Two panels: top shows P of Omega and t versus detuning Omega — a red sinc-squared curve with a blue dashed envelope. Bottom shows on-resonance probability versus time — a red parabola, a gray dashed golden-rule rate line, and a dotted breakdown marker at P equals one. Two sliders: TIME T from zero-point-one to twenty, and DENSITY OF STATES rho from zero-point-one to ten. A toggle switches the top panel between probability and rate. That is the layout. No judgment yet.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "media": {
+        "source_file": "media/output.mp4",
+        "cut": [
+          0,
+          7.875
+        ]
+      },
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 32.7,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "Drag the time slider. Two things happen at once in the top panel: the sinc-squared peak grows — proportional to t-squared — and it narrows — the first zero moves inward at two-pi over t. At t equals two, a broad hill. At t equals ten, a sharp spike that has just hit P equals one — the perturbation theory limit. At t equals twenty, a needle. That convergence — broad function collapsing toward a delta spike at zero detuning — is the mathematical origin of the golden rule. The sweep IS the argument.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "media": {
+        "source_file": "media/change.mp4",
+        "cut": [
+          0,
+          13.625
+        ]
+      },
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 27.2,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three things this visualization earns. First: the two-panel layout. Top gives the detuning-space picture; bottom gives the time-domain picture. Neither alone closes the argument. Both together do — and the red circle marker links them: one position in the bottom panel corresponds to exactly the peak height shown in the top panel. Second: the live first-zero annotation. As you drag, the text updates — First zero: Omega equals plus-or-minus two-pi over t equals this number right now. That number is the argument. Watching it shrink is what no static textbook figure can provide. Third: the physics-checks console. P1 PASS, P2 PASS, P3 PASS. A visualization that proves its own correctness in front of the student is not common.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "media": {
+        "source_file": "media/output.mp4",
+        "still": 4.0
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 40.11,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.jpg",
+        "filled_by": "still",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three things to fix. First: the rho slider does nothing visible to the top panel and the layout says nothing about why. A student moves rho, the sinc-squared curve does not move, and there is no tooltip, no label, no annotation explaining that rho enters only in the rate integral — not in P of Omega and t. It looks like a broken control. One sentence under the slider fixes it. Second: W means two different things on the same screen. In rate mode, the top panel labels the y-axis W of Omega and t equals P over t. The bottom panel and console display W equals two-pi vertical-bar V vertical-bar squared rho — the golden-rule scalar. Same letter, incompatible quantities. Students will conflate them. Third: the code uses d3.curveBasis — B-spline smoothing — on the sinc-squared path. At large t the sidelobes are physically sharp. Smoothing blunts them. The sidelobes are the argument for energy selectivity; blunting them blunts the lesson.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "media": {
+        "source_file": "media/change.mp4",
+        "still": 13.0
+      },
+      "estimated_duration_s": 20.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 50.77,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.jpg",
+        "filled_by": "still",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The two-panel layout earns the golden rule argument — no single graph does that. The rho slider's silence needs one label to become a physics lesson, not a UI mystery. d3.curveBasis blunts sidelobes that carry the energy-selectivity proof — swap in curveLinear. Use this viz immediately after the algebra, before touching density of states.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Fermi's Golden Rule — Viz Riff",
+            "artifactHeading": "Verdict",
+            "artifactLines": [
+              "Two-panel design — both panels needed to close the argument",
+              "ρ slider silence needs one label: ρ enters only the rate integral",
+              "d3.curveBasis blunts sidelobes — swap d3.curveLinear",
+              "Use after the algebra, before touching density of states"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 9.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 19.56,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Take the Fermi's Golden Rule simulation and make three targeted improvements. One: add a one-sentence note below the rho slider — quote, rho enters only the rate integral, not P of Omega and t — so its silence is a physics statement. Two: in the rate-mode toggle, rename the bottom-panel quantity from W to Gamma-GR to break the W notation collision with the top panel. Three: change d3.curveBasis to d3.curveLinear on the sinc-squared path so the sidelobes at large t are geometrically honest. Keep the two-panel layout, the live annotations, and the physics-checks console unchanged. Deliver a single self-contained HTML file.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Take the Fermi's Golden Rule simulation and make three targeted improvements. One: add a one-sentence note below the rho slider — 'rho enters only the rate integral, not P(Ω,t)' — so its silence is a physics statement. Two: rename the bottom-panel quantity from W to Γ_GR in rate mode to break the W notation collision. Three: change d3.curveBasis to d3.curveLinear on the sinc-squared path so sidelobes at large t are geometrically honest. Keep the two-panel layout, live annotations, and physics-checks console unchanged. Deliver a single self-contained HTML file.",
+            "segment": "Fermi's Golden Rule",
+            "greeting": "Your turn.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 15.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 36.03,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T00:50:53"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Fermi's Golden Rule — Riff on the Viz. @NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Fermi's Golden Rule — Riff on the Viz",
+            "handle": "@NikBearBrown",
+            "slug": "viz-riff-fermis-golden-rule"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 5.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 3.99,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T00:50:53"
+      }
+    }
+  ]
+}

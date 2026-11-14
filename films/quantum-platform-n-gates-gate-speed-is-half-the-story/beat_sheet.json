@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "slug": "viz-riff-platform-ngates-compare",
+    "title": "Quantum Platform N_gates — Gate Speed Is Half the Story",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "folderLabel": "@NikBearBrown",
+    "register": "Teardown",
+    "skill": "viz-riff",
+    "sim_slug": "vol4-platform-ngates-compare",
+    "build": {
+      "at": "2026-08-28T12:45:23",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Bonjour. Liam, in for Bear. Someone asked Claude to write a visualization comparing five quantum computing platforms by N-gates — coherence time divided by gate time. That is what loaded. We are judging the visualization, not the physics it teaches.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "write me a visualization comparing quantum computing platforms by N_gates — coherence time over gate time",
+            "greeting": "Bonjour, Liam",
+            "segment": "Liam, in for Bear.",
+            "runningText": "building platform comparison…",
+            "output": [
+              "✓ Quantum Platform N_gates Comparison",
+              "✓ five platforms: Transmon, Trapped Ion, Neutral Atom, NV Center, Spin Qubit",
+              "✓ view toggle · gate-time slider · physics console"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 12.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 14.4,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "White background, two panels. Left: five horizontal bars on a log scale — Raw T-two is the default view. Platform names labeled at left in five colors; values at right span 100 nanoseconds to 10 seconds. Right: a constraint table checking T-two against T-one. Below both: a physics console in dark monospace. Nothing moves until you interact.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0.0,
+          8.0
+        ]
+      },
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 19.26,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "MECHANISM",
+      "narration_text": "Click N-gates. The x-axis becomes coherence time divided by gate time. A dashed red vertical line marks ten to the fourth — the fault-tolerance threshold. Drag the slider left: gate times shrink, bars extend. Transmon’s bar crosses the threshold at a scale factor of zero-point-four. The on-screen hint tells you exactly where to set it.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/ngates-sweep.mp4",
+        "cut": [
+          0.0,
+          11.5
+        ]
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.39,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "The toggle is the strongest argument in the viz. In Raw T-two, Trapped Ion appears 25,000 times better than Transmon. Switch to N-gates and that gap collapses to five times — because Trapped Ion’s gate is 5,000 times slower. One click delivers what paragraphs cannot. The threshold line at ten-to-the-fourth adds a concrete pass-fail criterion: bars that cross it clear fault-tolerance; bars that do not, fail. That line is honest.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/ngates-sweep.mp4",
+        "still": 2.0
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 24.95,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three issues, each fixable. In Raw T-two mode the threshold note reads ‘dashed line equals ten-to-the-fourth’ — that dashed line does not exist in that view. The gate-time slider has no visual feedback when the view is Raw T-two: drag it, nothing changes on screen, no explanation given. And Neutral Atom posts an N-gates score of ten-to-the-sixth — fifty times better than Trapped Ion — but the physics console only compares Trapped Ion against Transmon. The chart’s most surprising number goes unnamed.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "still": 3.0
+      },
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 26.84,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let’s recap with Claude. The toggle earns its place: one click turns a 25,000-times coherence gap into a five-times N-gates advantage, and the viewer feels the lesson rather than reads it. The threshold line is honest and actionable. The one fix that matters most: display each platform’s gate time beside its bar in N-gates mode. Without it, the slider moves numbers the viewer cannot explain.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Quantum Platform N_gates — Verdict",
+            "artifactHeading": "What we found",
+            "artifactLines": [
+              "Toggle works: Raw T₂ → N_gates collapses a 25,000× gap to 5×.",
+              "Threshold line at 10⁴ gives a concrete pass—fail criterion at a glance.",
+              "Slider is silent in Raw T₂ mode — needs an affordance or a label.",
+              "Neutral Atom’s 10⁶ score — 50× better than Trapped Ion — goes unmentioned."
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 21.7,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. I have this quantum platform N-gates comparison visualization. Please add a tooltip that appears on hover over any bar in N-gates mode, showing: the platform name, its T-two value in microseconds, its gate time in nanoseconds, and the N-gates value computed from both. Below those numbers, include one sentence explaining why the ratio — not the raw coherence time — determines fault-tolerance feasibility. Finally, add a second tooltip line for the platform’s gate time in N-gates mode so the slider makes sense without reading the console.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have this quantum platform N-gates comparison visualization. Please add a tooltip that appears on hover over any bar in N-gates mode, showing: the platform name, its T₂ value in μs, its gate time in nanoseconds, and the N-gates value computed from both. Below those numbers, include one sentence explaining why the ratio — not the raw coherence time — determines fault-tolerance feasibility. Finally, add a second tooltip line for the platform’s gate time in N-gates mode so the slider makes sense without reading the console.",
+            "greeting": "Your turn.",
+            "segment": "Quantum Platform N_gates",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 29.67,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T12:45:23"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Quantum Platform N-gates — Gate Speed Is Half the Story. At NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Quantum Platform N_gates — Gate Speed Is Half the Story",
+            "slug": "viz-riff-platform-ngates-compare",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 5.0,
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.84,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T12:45:23"
+      }
+    }
+  ]
+}

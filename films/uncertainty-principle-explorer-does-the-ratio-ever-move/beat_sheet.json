@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "slug": "viz-riff-uncertainty-explorer",
+    "title": "Uncertainty Principle Explorer — Does the Ratio Ever Move?",
+    "series": "viz-riff",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "greeting": "Hej",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "palette": "claude",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "audience": "QM educators and students",
+    "build": {
+      "at": "2026-08-31T18:02:34",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Hej. This is Liam, in for Bear. Someone asked Claude to build a visualization of the uncertainty principle. This is what came back. We are not here to teach the physics — we are here to judge the visualization.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the Heisenberg uncertainty principle.",
+            "greeting": "Hej, Liam",
+            "segment": "Uncertainty Principle Explorer — viz riff",
+            "runningText": "building simulation…",
+            "output": [
+              "✓ Uncertainty Principle Explorer",
+              "✓ D3 log-log hyperbola wired",
+              "✓ dual-panel, slider, readout"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 9.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 11.52,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the viz",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two panels. Left: a red Gaussian curve, position probability density |ψ(x)|², plotted against x in natural units. Right: a log-log chart titled Uncertainty Hyperbola — a black diagonal line is the Robertson floor, σₓσₚ equals ℏ over 2. A red dot sits on it. Two static markers: HO ground state on the floor, ISW ground state above it. Above the charts: one slider, one dropdown, and a live readout showing σₓ, σₚ, their product, and a ratio. At the default settings, that ratio reads one point zero zero zero.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0.0,
+          6.0
+        ]
+      },
+      "spark_line": "describe before judging",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 full baseline hold",
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 32.68,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "mechanism",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "The slider controls σₓ — the position spread of the Gaussian. Drag it left: the waveform narrows and sharpens, the dot climbs the hyperbola. Drag right: the waveform broadens, the dot slides toward the corner. σₚ is always exactly ℏ over 2σₓ, because the code only models Gaussian states. The Gaussian is special — it is the unique state that saturates the Robertson bound exactly, so the dot never leaves the floor. That is the mechanism. And it is also the first thing the viz gets wrong.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change-sigx.mp4",
+        "cut": [
+          0.0,
+          8.0
+        ]
+      },
+      "spark_line": "drag σₓ, watch the dot",
+      "new_visual_element": "SOURCE-CUT: media/change-sigx.mp4 full slider sweep 0.1→10",
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 26.65,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "what it gets right",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "The log-log scale is the right call. On a log-log plot, σₓσₚ equals a constant is a straight line — slope minus one. The constraint IS the geometry. A linear-linear plot would give a hyperbola that collapses at the extremes and hides its own structure. This version lets the floor read clearly at any σₓ. The dual panel also earns its place: watch the waveform and the dot update simultaneously. That simultaneity is the argument — you feel the trade-off, not just compute it. And the fixed markers do genuine pedagogical work: HO n=0 sits on the floor line because the harmonic oscillator ground state saturates the bound; ISW n=1 sits above it, correctly, because the infinite square well does not.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change-sigx.mp4",
+        "cut": [
+          0.0,
+          5.0
+        ]
+      },
+      "spark_line": "log-log is the argument",
+      "new_visual_element": "SOURCE-CUT: media/change-sigx.mp4 early sweep — dot on floor, both markers visible",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 39.32,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "what it gets wrong",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three things the viz hides. One: the ratio. It reads 1.000 at every slider position — Gaussians always saturate the bound, so the number never moves. A student who plays with this for five minutes exits believing the uncertainty principle is always an equality. That is the most dangerous exit the viz can produce. Two: the y-axis. The left panel rescales the waveform height on each slider move but never redraws the axis ticks. At σₓ equals nine, the waveform peak is 0.044 but the y-axis still reads up to 0.8. Every density value the student reads from the axis is wrong after the first interaction. Three: no momentum waveform. σₚ appears as a number in the readout, not a visible curve. You cannot feel the duality if you only see one side.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change-sigx.mp4",
+        "cut": [
+          5.0,
+          8.0
+        ]
+      },
+      "spark_line": "ratio stuck at 1.000",
+      "new_visual_element": "SOURCE-CUT: media/change-sigx.mp4 end-of-sweep — σₓ≈9, ratio frozen, y-axis stale",
+      "estimated_duration_s": 34.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 42.28,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "lead_silence_s": 0.5,
+      "narration_text": "Let's recap with Claude. The log-log hyperbola is the right encoding. The dual panel makes the trade-off real. But the ratio locks at 1.000 and teaches the wrong lesson. The y-axis ticks go stale after the first slider move. Use this mid-lesson, after Gaussian packets — not as an introduction to the principle. Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Uncertainty Principle Explorer",
+            "artifactHeading": "VERDICT",
+            "artifactLines": [
+              "Log-log hyperbola — the right geometric encoding.",
+              "Dual-panel makes the trade-off tactile and correct.",
+              "Ratio locked at 1.000 — the bound looks like an equality.",
+              "Y-axis ticks go stale after first slider move.",
+              "Use mid-lesson, after Gaussian packets. Not as an introduction."
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 18.84,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn handoff",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Your turn. Paste this into Claude: I have an Uncertainty Principle Explorer where the ratio readout is always 1.000 because only Gaussian states are modeled. Add a squeezed coherent state to the dropdown where σₓσₚ is greater than ℏ over 2 — so the ratio readout exceeds 1.000 when that state is selected. Also fix the y-axis: the axis tick group is never redrawn when the slider moves, so labels go stale. Call the D3 axis update inside the slider input event handler. Keep single-file HTML and D3 CDN. Run it and watch the ratio finally move. Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have an Uncertainty Principle Explorer where σₓσₚ / (ℏ/2) always reads 1.000 — only Gaussians are modeled. Add a squeezed coherent state to the dropdown where σₓσₚ > ℏ/2 so the ratio exceeds 1. Also fix the y-axis: redraw the axis ticks inside the slider input handler. Keep single-file HTML, D3 CDN.",
+            "greeting": "Your turn.",
+            "segment": "Uncertainty Principle Explorer — viz riff",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 35.39,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Uncertainty Principle Explorer — Does the Ratio Ever Move? Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Uncertainty Principle Explorer — Does the Ratio Ever Move?",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 5.0,
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 5.16,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-31T18:02:34"
+      }
+    }
+  ]
+}

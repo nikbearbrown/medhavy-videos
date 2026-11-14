@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "slug": "viz-riff-rabi-detuning-landscape",
+    "title": "Rabi Detuning Landscape — One Bug Breaks the Whole Sim",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "viz-riff critique of vol3-rabi-detuning-landscape.html — encodings, interaction honesty, one showstopper bug",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "footer": "@NikBearBrown",
+    "handle": "@NikBearBrown",
+    "build": {
+      "at": "2026-08-25T19:56:02",
+      "cut": "review",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Bonjour, Liam — in for Bear. Someone typed: write me a Rabi oscillation visualization, show what detuning does to the spin flip. What came back is a two-panel D3 interactive called the Rabi Detuning Landscape. Today we are not judging the physics. We are judging the visualization.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for Rabi oscillations — show how detuning kills spin flip probability.",
+            "topic": "CLAUDE · VIZ RIFF",
+            "segment": "Rabi Detuning Landscape — Viz Riff",
+            "greeting": "Bonjour, Liam",
+            "runningText": "building simulation…",
+            "output": [
+              "✓ Rabi Detuning Landscape — D3 interactive",
+              "✓ two panels: time domain + Lorentzian",
+              "✓ two sliders wired"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 8.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 15.51,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "The sim loads to a white page, title Rabi Detuning Landscape, and a subtitle equation pinned directly below it. Two sliders at the top — Detuning Δ over Ω running zero to five, and Drive Power Ω in kilohertz. Below them, a readout strip showing five computed values: the detuning ratio, maximum flip probability, generalized Rabi frequency, oscillation period, and full-width half-maximum. Then two SVG panels side by side: the left titled P flip of t, with a time axis in milliseconds; the right titled P max of Δ, Lorentzian, with detuning in units of Ω.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 full 6s baseline hold",
+      "media": {
+        "source_file": "media/output.mp4",
+        "cut": [
+          0,
+          6
+        ]
+      },
+      "estimated_duration_s": 35.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 34.65,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The primary control sweeps Δ over Ω from zero — resonance — out to five, far off-resonance. The slider thumb moves across the track. The simulation is supposed to respond in real time: the Rabi oscillation on the left should shrink and speed up, and a red dot on the Lorentzian should slide down the curve to show where the current detuning sits. What actually happens: the slider thumb moves. The readout strip stays at its initial values. No curve updates. No dot appears. The interaction does not fire.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "new_visual_element": "SOURCE-CUT: media/change.mp4 full 10s detuning sweep",
+      "media": {
+        "source_file": "media/change.mp4",
+        "cut": [
+          0,
+          10
+        ]
+      },
+      "estimated_duration_s": 38.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 26.71,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "What the visualization gets right, starting with the architecture. The two-panel layout is the correct choice: the Lorentzian on the right is the frequency-domain argument — how sensitively flip probability drops with detuning — and the time-domain chart on the left is the consequence in the actual oscillation. Both panels on screen simultaneously is exactly the physics story. Second: the Lorentzian has half-power reference lines at plus and minus one Ω with a P equals 0.5 label — the FWHM equals two Ω result is visually readable before the student checks the number. Third: the equation lives in the subtitle, front-loaded, not hidden.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "new_visual_element": "STILL: t=1s from media/output.mp4 — both panels at resonance",
+      "media": {
+        "source_file": "media/output.mp4",
+        "still": 1
+      },
+      "estimated_duration_s": 35.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 36.67,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "What the visualization gets wrong, starting with the crash. Line 157 in the source reads: attr y, IH minus 4 — IH is not defined in any scope; the correct name is lIH, defined three lines earlier. A synchronous ReferenceError kills the entire script at that line. The update function is never defined, the event listeners are never registered, the Lorentzian dot is never created. Everything interactive is dead on arrival. One character rename fixes it. Second bug: the FWHM readout computes two times omega divided by omega — always two, always. Third: the time axis is fixed at six milliseconds regardless of drive power. At five kilohertz that window compresses thirty Rabi cycles into a stripe. Fourth: the ghost reference curve carries no legend — a student does not know what the gray line is.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "new_visual_element": "STILL: t=8s from media/change.mp4 — slider at max, readout unchanged",
+      "media": {
+        "source_file": "media/change.mp4",
+        "still": 8
+      },
+      "estimated_duration_s": 45.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 44.59,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's check in with Claude. The Rabi Detuning Landscape knows what it wants to be: a dual-panel, quantitative resonance checker for post-lecture use. The showstopper is one wrong variable name on line 157. Fix that, address the FWHM units and the adaptive time axis, add a ghost-curve legend, and this sim is classroom-ready.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Rabi Detuning Landscape",
+            "artifactHeading": "Verdict",
+            "artifactLines": [
+              "Time-domain oscillation: never drawn — crash at line 157 (IH → lIH)",
+              "Dual-panel Lorentzian design: correct encoding for this physics",
+              "FWHM readout hardcoded: always 2.00, physical units discarded",
+              "One-line fix unlocks everything; three more make it classroom-ready"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 25.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 19.26,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "I have a single-file D3 simulation of Rabi oscillations called vol3-rabi-detuning-landscape.html. There is a bug on line 157: attr y, IH minus 4 — IH is not defined; it should be lIH. First, fix that bug. Then make three improvements. One: give the ghost reference curve a legend label reading Δ equals 0 reference, positioned inside the SVG near the curve. Two: make the time axis adaptive — compute tMax as four divided by Omega_gen inside the update function, rebind the x-scale domain, and re-render the axis so exactly four Rabi periods are always visible. Three: correct the FWHM readout on line 189 to compute two times omega and display the result in kilohertz. Keep the D3 CDN import and single-file format.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a D3 Rabi oscillation sim (vol3-rabi-detuning-landscape.html). Bug on line 157: `IH` should be `lIH`. Fix it. Then: (1) label the ghost curve 'Δ=0 reference' in the SVG, (2) make the time axis show 4 Rabi periods always (tMax = 4/Omega_gen), (3) fix FWHM readout to show 2*omega kHz. Keep D3 CDN + single-file.",
+            "topic": "CLAUDE · VIZ RIFF",
+            "segment": "Your Turn",
+            "greeting": "Your turn.",
+            "runningText": "paste this into Claude…",
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 52.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 44.22,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T19:56:02"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Rabi Detuning Landscape — one bug breaks the whole sim. Liam.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Rabi Detuning Landscape — One Bug Breaks the Whole Sim",
+            "slug": "viz-riff-rabi-detuning-landscape",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 7.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.52,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T19:56:02"
+      }
+    }
+  ]
+}

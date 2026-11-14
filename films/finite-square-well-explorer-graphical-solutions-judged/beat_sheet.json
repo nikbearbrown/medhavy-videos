@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "slug": "viz-riff-finite-well-explorer",
+    "title": "Finite Square Well Explorer — Graphical Solutions, Judged",
+    "topic": "Quantum Mechanics",
+    "purpose": "viz-riff critique of the finite square well graphical-solution sim",
+    "skill": "viz-riff",
+    "book": "quantum-mechanics-a-companion-guide",
+    "sim_source": "humanitarians_html/public/ai1/simulations/qmcg-finite-well-explorer.html",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "channel": "claude-liam",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-28T10:47:46",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Namaste. Liam, in for Bear. A finite square well explorer — graphical solutions in 1D and 3D in one sim. We're judging the visualization, not the physics.",
+      "estimated_duration_s": 10.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Namaste, Liam",
+            "command": "Hey Claude, write me a visualization for finite square well graphical solutions.",
+            "segment": "Graphical Solutions, Judged",
+            "topic": "FINITE WELL · JUDGED",
+            "runningText": "building simulation…",
+            "output": [
+              "✓ Finite Square Well — Graphical Solution",
+              "✓ 1D symmetric + 3D spherical modes",
+              "✓ V₀ slider wired, intersections → bound states"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 9.94,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Two panels. Left: three curves on a graph — red z-tangent-z, slate negative-z-cotangent-z, and a black semicircle root of z-naught-squared minus z-squared. Intersection dots labeled E1, O1, E2, O2. Right: a V₀ slider, four stat boxes, a well diagram with energy levels and wavefunction sketches. A three-dot status bar runs along the bottom.",
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "shot": {
+        "type": "SOURCE-CUT",
+        "source": "source",
+        "media_file": "media/B01.mp4"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B01.mp4 (output.mp4 full baseline, V₀=5eV, 4 bound states)",
+      "actual_duration_s": 21.03,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The slider sets V₀ — well depth — from 0.05 to 100 electron-volts. V₀ determines z₀, the semicircle's radius: z₀ equals a over h-bar times root of 2m-V₀, with a fixed at 0.5 nanometers. Drag V₀ up, z₀ grows, the arc sweeps right, more branches intersect it, more bound states appear. In 1D, at least one exists for any nonzero well depth.",
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "shot": {
+        "type": "SOURCE-CUT",
+        "source": "source",
+        "media_file": "media/B02.mp4"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B02.mp4 (change.mp4 — V₀ swept 0.05→100eV, bound states accumulate)",
+      "actual_duration_s": 23.06,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "The graphical solution approach is right: bound states are intersections, not algebraic values you chase in the dark. The parity labels — E for even, O for odd — tie the color code to the physics. The 1D to 3D toggle is the sim's best move: one click shows that the 3D radial equation for ℓ equals zero maps onto the odd-parity condition, with a hard threshold below which no bound states exist. The self-check bar at the bottom numerically verifies three physics predictions on every frame. The sim audits itself.",
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "shot": {
+        "type": "SOURCE-CUT",
+        "source": "source",
+        "media_file": "media/B03.mp4",
+        "note": "CALLOUT OVERLAY NEEDED (final pass): ring intersection dots E1/O1, arrow status-bar checks"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B03.mp4 (change-3d.mp4 t=5–12s: 3D mode, bound state appears + check bar)",
+      "actual_duration_s": 29.74,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "The y-axis is labeled y. Just y. It represents both sides of the transcendental equation — the LHS functions and the semicircle RHS — but the label communicates none of that. The fix is two characters: f of z. Second: the spatial axis of the well diagram has no label; the code plots in units of the half-width a, and a student cannot know that. Third: the wavefunction amplitudes are cosmetically scaled for display — the code says explicitly 'not in correct units, we just want the shape' — so what looks like a normalized wavefunction is display art, not quantum mechanics.",
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "shot": {
+        "type": "SOURCE-CUT",
+        "source": "source",
+        "media_file": "media/B04.mp4",
+        "note": "CALLOUT OVERLAY NEEDED (final pass): circle the 'y' axis label, arrow the unlabeled well x-axis"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B04.mp4 (output.mp4 t=0–6s: baseline showing y-axis label + unlabeled well axis)",
+      "actual_duration_s": 31.4,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Best used mid-lesson: after writing the transcendental equations, before a numeric solve. The 3D toggle is the strongest encoding — no common sim makes the 1D-to-3D mapping this clear. The self-check bar is honest engineering. One fix matters most: label the y-axis. It has a job.",
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "static",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Finite Well Explorer — Verdict",
+            "artifactHeading": "When to use it, and what to fix.",
+            "artifactLines": [
+              "Best mid-lesson: after transcendental equations, before numeric solve.",
+              "3D toggle: maps 1D odd-parity → 3D ℓ=0. No common sim does this.",
+              "Self-check bar verifies three physics predictions live.",
+              "One fix: label the y-axis. It has a job."
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 17.62,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Here's the prompt. 'I have this finite square well explorer. Fix three things. First: the y-axis on the graphical solution plot is labeled just y — rename it to f of z and add to the legend that intersections equal bound states. Second: label the x-axis of the well diagram — it plots in units of the half-width a, so label it x over a. Third: replace the cosmetically-scaled wavefunctions with properly normalized psi-squared probability density at each energy level. Keep the single-file D3 format.' Take that into your next Claude session.",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "command": "I have this finite square well explorer. Fix three things. First: the y-axis on the graphical solution plot is labeled just 'y' — rename it to f(z) and add to the legend that intersections = bound states. Second: label the x-axis of the well diagram — it plots in units of the half-width a, so label it 'x / a'. Third: replace the cosmetically-scaled wavefunctions with properly normalized |ψ|² probability density at each energy level. Keep the single-file D3 format.",
+            "segment": "Graphical Solutions, Judged",
+            "topic": "FINITE WELL · JUDGED",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 31.21,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Finite Square Well Explorer — Graphical Solutions, Judged. Liam, in for Bear.",
+      "estimated_duration_s": 6.0,
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "static",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Finite Square Well Explorer — Graphical Solutions, Judged",
+            "handle": "@NikBearBrown",
+            "slug": "viz-riff-finite-well-explorer",
+            "mascotAnimation": "wave"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 5.35,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T10:47:46"
+      }
+    }
+  ]
+}

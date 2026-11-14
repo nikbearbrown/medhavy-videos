@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "slug": "viz-riff-hard-sphere-crosssection",
+    "title": "Hard-Sphere Scattering Cross Section — Viz Riff",
+    "topic": "Quantum scattering, partial waves, hard-sphere cross section",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "audience": "Practitioners following Claude workflows",
+    "skill": "viz-riff",
+    "source_sim": "humanitarians_html/public/ai1/simulations/vol3-hard-sphere-crosssection.html",
+    "build": {
+      "at": "2026-08-25T18:50:51",
+      "cut": "review",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Merhaba. This is Liam, in for Bear. Someone typed: hey Claude, write me a visualization for hard-sphere quantum scattering. Here is what came back. Today we judge the viz — not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for hard-sphere quantum scattering",
+            "greeting": "Merhaba, Liam",
+            "topic": "HARD-SPHERE SCATTERING · VIZ RIFF",
+            "segment": "Judging the viz, not the physics",
+            "runningText": "building visualization…",
+            "output": [
+              "✓ Hard-Sphere Scattering Cross Section",
+              "✓ two-panel D3 layout — σ(ka) curve + partial waves",
+              "✓ ka slider + ℓ_max slider wired"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 8.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.62,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "White page, two panels. Left: σ divided by πa-squared vs ka, plotted over zero to thirty. Three dashed reference lines. A red dot tracks the current value. Right panel: a bar chart of partial wave contributions labeled by ℓ. Two sliders — one for ka, one for ℓ-max. Nothing interactive yet. Just the layout at the default ka of one.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "media": {
+          "file": "media/output.mp4",
+          "cut": [
+            0,
+            8.125
+          ]
+        }
+      },
+      "new_visual_element": "SOURCE-CUT: media/B01.mp4 (from output.mp4, full baseline hold at ka=1)",
+      "estimated_duration_s": 10.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 20.65,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "Now drag ka from 0.1 to 30 — from the long-wavelength quantum regime to the short-wavelength limit. The precomputed curve over two hundred points shows the full shape before any interaction. At low ka the cross section sits near four — four times the classical geometric value πa-squared. At high ka it approaches two, not one. The Babinet prediction. The right panel tracks which partial waves are active.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "media": {
+          "file": "media/change.mp4",
+          "cut": [
+            0,
+            11.54
+          ]
+        }
+      },
+      "new_visual_element": "SOURCE-CUT: media/B02.mp4 (from change.mp4, ka sweep 0.1→30)",
+      "estimated_duration_s": 13.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 22.1,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "The three dashed reference lines are the entire argument made visible without a word of narration. Classical at one. Quantum low-energy at four — four times classical. Babinet at two — still twice classical, never dropping to one. The viewer reads the triple comparison directly off the axes before touching any control. The subtitle states the result, both limits, and the contradiction with classical mechanics in a single sentence. And the live readout hands the viewer an exact number before they drag — predict, then verify.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "media": {
+          "file": "media/output.mp4",
+          "still": 4.0
+        }
+      },
+      "new_visual_element": "STILL: media/B03.png (freeze at t=4s, ka=1.0, reference lines visible)",
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 28.12,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Two real problems. First: the reference line labels are clipped. The SVG does not overflow its container — the text is cut at the boundary. The lines read as truncated fragments: four parenthesis-q, two parenthesis-B, one parenthesis-cl. A student who does not already know Babinet's principle cannot decode them. Second: the bar chart is anchored at ℓ-max equals eight throughout the entire sweep. At ka equals thirty, the readout correctly says ℓ-max needed is thirty-two — but the bars never show that proliferation. At high energy, partial waves zero through thirty all contribute equally, forming a rising staircase. The bars show ℓ-zero dominant. That is the wrong picture.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "media": {
+          "file": "media/change.mp4",
+          "still": 10.5
+        }
+      },
+      "new_visual_element": "STILL: media/B04.png (freeze at t=10.5s, ka≈28, clipped labels and frozen bar chart)",
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 39.0,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The three reference lines are a design win — classical, quantum-low, Babinet, readable before any interaction. The subtitle is the whole argument in one sentence. The partial wave bar chart fails above ka equals eight — ℓ-max frozen misrepresents the distribution at high energy. Use this viz after introducing partial wave expansion, not before. The one fix that matters: auto-link ℓ-max to ceil of ka plus two.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Hard-Sphere Scattering Cross Section",
+            "artifactHeading": "Viz Riff — Verdict",
+            "artifactLines": [
+              "Three reference lines: design win — classical / quantum-low / Babinet readable before interaction",
+              "Subtitle encodes the whole result in one sentence",
+              "Bar chart fails above ka=8 — ℓ_max frozen misrepresents high-energy wave distribution",
+              "Best deployed after partial wave expansion is introduced in lecture",
+              "One fix: auto-link ℓ_max to Math.ceil(ka) + 2"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 26.6,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Here is a prompt ready to paste: I have a D3 visualization of hard-sphere quantum scattering. The partial wave bar chart is anchored at ℓ-max equals eight — even at ka equals thirty where thirty-two waves contribute. Fix it so ℓ-max auto-scales to Math.ceil of ka plus two, capped at sixty. While you are in the code, fix the reference line labels — they are clipped because the SVG does not overflow its container. Add overflow colon visible to the SVG element. Then verify: at ka equals twenty, the bar chart should show a monotonically rising staircase. This is the interaction that unlocks the second teachable moment — run it on your own scattering problem and see what the bars tell you.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a D3 viz of hard-sphere quantum scattering. The partial wave bar chart is stuck at ℓ_max=8 even at ka=30 where 32 waves contribute. Fix: auto-scale ℓ_max to Math.ceil(ka)+2 capped at 60. Also fix clipped reference line labels — add overflow:visible to the SVG. Verify: at ka=20, bars should form a rising staircase.",
+            "greeting": "Your turn.",
+            "topic": "HARD-SPHERE SCATTERING · VIZ RIFF",
+            "segment": "Fix the partial wave display and clipped labels",
+            "runningText": "paste this into Claude…",
+            "output": []
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 39.66,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:50:51"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Hard-Sphere Scattering Cross Section. Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Hard-Sphere Scattering Cross Section — Viz Riff",
+            "slug": "viz-riff-hard-sphere-crosssection",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 5.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 3.99,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:50:51"
+      }
+    }
+  ]
+}

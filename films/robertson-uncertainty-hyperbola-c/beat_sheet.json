@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "slug": "viz-riff-uncertainty-hyperbola",
+    "title": "Uncertainty Hyperbola — σₓ × σₚ ≥ ħ/2 (viz riff)",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "Riff critique of the vol1-uncertainty-hyperbola D3 simulation: encodings, interaction honesty, and pedagogy — not the physics.",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "build": {
+      "at": "2026-08-25T18:12:56",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Bonjour, Liam. I'm Liam, in for Bear. Someone asked Claude to build a visualization of the Heisenberg uncertainty principle — squeeze position, and momentum explodes. We have two panels, one slider, three buttons, and a hyperbola. Let's not teach the physics. Let's judge the viz.",
+      "estimated_duration_s": 20.0,
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the Heisenberg uncertainty principle.",
+            "greeting": "Bonjour, Liam",
+            "segment": "Uncertainty Hyperbola",
+            "runningText": "judge the viz",
+            "output": [
+              "✓ Uncertainty Hyperbola — σₓ × σₚ ≥ ħ/2",
+              "✓ two panels: position density + log-log hyperbola",
+              "✓ slider + state overlay controls wired"
+            ]
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk — cold open, Liam in for Bear, judging the viz not the physics",
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 15.15,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ, CLEAN",
+      "narration_text": "At rest: two panels. Left — a red Gaussian curve labeled Position density |ψ(x)|², x-axis in nanometers. Right — a log-log plot, dark diagonal line labeled σₓ–σₚ Hyperbola, a filled red dot sitting on it. Above both: one slider, width parameter a in nanometers; three buttons — Gaussian, ISW n=1, ISW n=5. A readout strip shows σₓ, σₚ, and their product ratio live.",
+      "estimated_duration_s": 20.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0,
+          8.0
+        ]
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 23.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The slider drives the Gaussian state. σₓ equals a over root two — make a larger, position smears out. σₚ equals one over root two a — momentum sharpens. Their product never budges: always ħ over two. The red dot rides the hyperbola as a moves, and the ratio stays 1.000 the entire sweep.",
+      "estimated_duration_s": 18.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0,
+          11.4
+        ]
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 18.69,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Here is what it gets right. Log-log axes transform σₚ equals ħ over two σₓ into a straight line of slope minus one — the power law reads visually, no algebra required. The red dot traces exactly that line during the slider sweep; the Gaussian never escapes the minimum uncertainty bound. And the ISW markers above the line show students that other states don't saturate it. Each pro is doing work.",
+      "estimated_duration_s": 22.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "still": 4.0
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 22.21,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three problems. Click ISW n=1 or n=5, then drag the slider — nothing happens. The thumb moves, the number updates, the charts don't. No disabled state, no tooltip. A student will think the viz is broken, or walk away with the wrong mental model. Second: the σₚ readout label says eV/c — the code computes normalized ħ/nm values. Wrong unit, wrong by a factor of three. Third: ISW marker labels are nine pixels — illegible at playback resolution.",
+      "estimated_duration_s": 28.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "still": 2.5
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 27.52,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The log-log encoding is right — elegant geometry. The red dot earns its place. But the ISW slider is a silent lie, and the unit label is stale. Use this in your quantum mechanics course after covering Gaussian states. Wire the slider to the ISW well width L — that is the one fix that matters most.",
+      "estimated_duration_s": 20.0,
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Uncertainty Hyperbola",
+            "artifactHeading": "Viz Riff Verdict",
+            "artifactLines": [
+              "Log-log encoding: straight line makes the trade-off read",
+              "Red dot on minimum: Gaussian saturation shown tactilely",
+              "ISW markers: states above the bound quantified",
+              "Silent slider: interaction lie when ISW is active",
+              "Stale unit label: eV/c on a ħ/nm readout"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeVerdictArtifact — verdict card with bare recap lines",
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 18.67,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "I have an Uncertainty Hyperbola simulation: a slider for Gaussian width parameter a and toggle buttons for Gaussian, ISW n=1, and ISW n=5. When ISW is selected, the slider does nothing — the ISW markers are hardcoded for L=1nm. Fix this: wire the slider to ISW well width L, recompute σₓ and σₚ for each n at that L, and shift the markers on the log-log hyperbola dynamically. Also fix the σₚ readout — it shows eV/c but should show ħ/nm. Preserve the two-panel layout and log-log axes.",
+      "estimated_duration_s": 35.0,
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have an Uncertainty Hyperbola simulation: a slider for Gaussian width parameter a and toggle buttons for Gaussian, ISW n=1, and ISW n=5. When ISW is selected, the slider does nothing — the ISW markers are hardcoded for L=1nm. Fix this: wire the slider to ISW well width L, recompute σₓ and σₚ for each n at that L, and shift the markers on the log-log hyperbola dynamically. Also fix the σₚ readout — it shows eV/c but should show ħ/nm. Preserve the two-panel layout and log-log axes.",
+            "greeting": "Your turn.",
+            "segment": "Uncertainty Hyperbola",
+            "runningText": "paste this into Claude…",
+            "output": []
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk YOUR TURN — paste-ready fix prompt",
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 34.01,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:12:56"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Uncertainty Hyperbola — σₓ times σₚ, greater than or equal to ħ over two. At NikBearBrown.",
+      "estimated_duration_s": 6.0,
+      "tail_silence_s": 1.0,
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Uncertainty Hyperbola — σₓ × σₚ ≥ ħ/2 (viz riff)",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeTitleOutro — title restate + @NikBearBrown",
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 7.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T18:12:56"
+      }
+    }
+  ]
+}

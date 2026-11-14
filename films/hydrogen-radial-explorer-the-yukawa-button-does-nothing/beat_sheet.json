@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "slug": "viz-riff-hydrogen-radial-explorer",
+    "title": "Hydrogen Radial Explorer — The Yukawa Button Does Nothing",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "purpose": "Viz-riff critique of qm2-hydrogen-radial-explorer.html — encodings, controls, honesty; not the quantum mechanics",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "channel": "claude-liam",
+    "handle": "@NikBearBrown",
+    "folderLabel": "@NikBearBrown",
+    "persona": "Liam",
+    "palette": "claude",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-25T07:49:42",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Kia ora. Liam — in for Bear. One Claude prompt: build me a hydrogen radial-density explorer. D3, live in the browser. We are not here to re-teach the quantum mechanics. We are here to judge whether this visualization earns the physics it promises.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for hydrogen radial probability density — sweep n and ℓ.",
+            "greeting": "Kia ora, Liam",
+            "runningText": "building simulation…",
+            "segment": "Hydrogen Radial Explorer",
+            "output": [
+              "✓ Hydrogen Radial Density P(r) = r²|R_{nℓ}(r)|²",
+              "✓ D3 v7 from CDN — no build step",
+              "✓ n and ℓ dropdowns wired",
+              "✓ overlay toggle + readout panel"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk cold open — hydrogen density prompt",
+      "estimated_duration_s": 14.0,
+      "actual_duration_s": 14.34,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "The sim opens on n equals 2, ℓ equals 0. Red curve: radial probability density P of r, shaded below. A dashed vertical line marks the mean radius. Red dots on the baseline locate the radial nodes. A readout panel fires six live values in red: n, ℓ, energy in electron-volts, node count, mean radius, and peak count. Four controls: n and ℓ dropdowns, an overlay toggle, and a Yukawa-screening button.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/output.mp4",
+        "cut": [
+          0,
+          7.875
+        ]
+      },
+      "new_visual_element": "SOURCE-CUT output.mp4 — baseline n=2 ℓ=0 state",
+      "estimated_duration_s": 18.0,
+      "actual_duration_s": 26.07,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "Walk ℓ from zero to two at n equals 3. ℓ equals 0: three peaks, two radial nodes, energy minus 1.51 electron-volts. Advance to ℓ equals 1: one node gone, energy unchanged. Advance to ℓ equals 2: zero nodes, still minus 1.51. Enable the overlay: all three curves appear simultaneously, labelled with the shared energy. This is the Coulomb degeneracy, displayed as a graphic fact.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/change.mp4",
+        "cut": [
+          0,
+          13.333
+        ]
+      },
+      "new_visual_element": "SOURCE-CUT change.mp4 — scripted n=3 ℓ sweep 0→1→2 then overlay",
+      "estimated_duration_s": 20.0,
+      "actual_duration_s": 27.24,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three things earn this viz. The overlay is the argument: three orbital shapes, three different mean radii, one shared energy label — Coulomb degeneracy is visible before you write any algebra. The live readout names radial nodes as n minus ℓ minus one, which students can verify against the curve on every click. And the mean-radius line moves left as ℓ rises, showing that angular momentum trades radial extent for fewer oscillations — a spatial encoding that is true to the equation.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/change.mp4",
+        "still": 11
+      },
+      "new_visual_element": "Freeze-frame change.mp4 t=11s — overlay active, all n=3 states with Coulomb degeneracy label",
+      "estimated_duration_s": 24.0,
+      "actual_duration_s": 28.57,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three failures. First: the Yukawa-screening button does nothing. The code sets a flag that the update function never reads. Clicking it is instructively inert — physics implied, effect absent. Second: the x-axis domain is twenty n-squared Bohr radii, so for n equals 3 roughly eighty percent of the canvas is empty. Spatial comparison across n values is visually impossible. Third: both axes rescale on every ℓ change, erasing amplitude information. The ℓ-zero and ℓ-two peaks appear the same height — they are not; the y-axis was remapped.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "source_file": "media/output.mp4",
+        "still": 3
+      },
+      "new_visual_element": "Freeze-frame output.mp4 t=3s — n=2 ℓ=0 showing empty x-axis and Yukawa button",
+      "estimated_duration_s": 26.0,
+      "actual_duration_s": 33.09,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. The overlay delivers Coulomb degeneracy as a visual argument. Best used after students have derived the wavefunction — the overlay confirms algebra, it does not replace it. But before this goes in front of a class: the Yukawa button must be removed or implemented. A control that promises to show how degeneracy breaks, and does nothing, damages the sim's credibility on everything else.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Hydrogen Radial Explorer — Verdict",
+            "artifactHeading": "Riff on the viz, not the physics",
+            "artifactLines": [
+              "Overlay delivers Coulomb degeneracy — three shapes, one energy",
+              "Live readout checks radial-node arithmetic on every click",
+              "Mean-radius line encodes spatial contraction at constant energy",
+              "Yukawa screening button is wired to nothing",
+              "x-axis domain leaves 80% of canvas empty at n = 3",
+              "Verdict: use after deriving ψ_{nℓ} — fix or remove the Yukawa button first"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeVerdictArtifact — verdict card",
+      "estimated_duration_s": 20.0,
+      "actual_duration_s": 20.8,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. I have a D3 visualization of hydrogen radial probability density that lets users select n and ℓ. There is a Yukawa screening button that currently does nothing. I want you to implement it. Add a slider that sweeps a screening length λ from 1 to 20 Bohr radii. Use a fourth-order Runge-Kutta solver for the radial Schrödinger equation with the Yukawa potential V of r equals negative e-squared over r times exponential of negative r over λ. Show the modified P of r as a dashed overlay on top of the hydrogen curve. Update the energy readout to show the screened eigenvalue and the shift delta-E in electron-volts. Three concrete deliverables: implement the RK4 radial solver, add the screening slider, and show the energy shift in the readout panel.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a D3 viz of hydrogen radial probability density P(r)=r²|R_{nℓ}(r)|² with n and ℓ dropdowns. The Yukawa screening button does nothing. Implement it: add a slider for screening length λ (1–20 a₀), use RK4 to solve the radial Schrödinger equation with V(r) = −e²/(r·a₀)·exp(−r/λ), show the modified P(r) as a dashed overlay, and display ΔE in eV in the readout. Three deliverables: (1) RK4 radial solver, (2) λ slider with default λ=∞, (3) ΔE in the readout panel.",
+            "greeting": "Your turn.",
+            "runningText": "paste this into Claude…",
+            "segment": "Hydrogen Radial Explorer",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk YOUR TURN — Yukawa implementation prompt",
+      "estimated_duration_s": 38.0,
+      "actual_duration_s": 43.37,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T07:49:42"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Hydrogen Radial Explorer — the viz riff. At NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Hydrogen Radial Explorer — The Yukawa Button Does Nothing",
+            "slug": "viz-riff-hydrogen-radial-explorer",
+            "handle": "@NikBearBrown",
+            "mascotAnimation": "wave"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeTitleOutro — title restate",
+      "estimated_duration_s": 5.0,
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 4.29,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T07:49:42"
+      }
+    }
+  ]
+}

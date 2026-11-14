@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "slug": "viz-riff-willow-threshold-reconstruction",
+    "title": "Willow Threshold Reconstruction — Viz Riff",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "Riff on the D3 surface code error rate visualization — log-log encoding, gap annotation, Lambda-to-overhead disconnection.",
+    "clock": "narration",
+    "channel": "claude-liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-26T00:17:45",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Bonjour, Liam — in for Bear. Claude built a quantum error correction simulator. Log-log chart, surface codes, Google Willow. We are not grading the physics. We are grading the visualization.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "write me a visualization for surface code error rates",
+            "segment": "Surface Code Error Rates",
+            "greeting": "Bonjour, Liam",
+            "runningText": "generating visualization…",
+            "output": [
+              "✓ Willow Threshold Reconstruction — Surface Code Error Rates",
+              "✓ D3 log-log chart, three distance curves",
+              "✓ Lambda + p sliders, overhead calculator"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk cold open",
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.71,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Four panels. Main chart: logical error rate versus physical error rate, log-log. Three curves for code distances three, five, seven. Dashed vertical at the threshold at zero-point-zero-one. A red dot — Willow, zero-point-one-four-three percent. Two sliders on the right. An overhead calculator and a physics console below.",
+      "shot": {
+        "type": "CAPTURE",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0,
+          7.8
+        ]
+      },
+      "new_visual_element": "Baseline sim — describe before judgment",
+      "estimated_duration_s": 20.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 18.2,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The Lambda slider drives the suppression factor. Drag it: a gap annotation line updates on the chart, connecting the d-equals-seven formula prediction to the hardcoded Willow dot. At Willow's measured Lambda of two-point-one-four, the formula gives zero-point-four-seven-seven percent; Willow measured zero-point-one-four-three. The three distance curves do not move.",
+      "shot": {
+        "type": "CAPTURE",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0,
+          11.4
+        ]
+      },
+      "new_visual_element": "Lambda slider sweep — gap annotation live",
+      "estimated_duration_s": 21.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.61,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "What it gets right: the log-log scale is doing real work. The slope of each curve is the code exponent — steeper for larger d. Below threshold, bigger code distance, exponentially lower logical error rate. The gap annotation places two exact numbers — formula prediction and Willow measured — on the same visual axis with a connecting line.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "still": 3.0
+      },
+      "new_visual_element": "Still — initial state, log-log curves + gap annotation visible",
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 18.43,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three problems. The Lambda slider and the overhead calculator are disconnected — drag Lambda, the overhead table does not follow. The Willow dot is hardcoded: it stays fixed as the formula moves, so the gap annotation spans different p-values at different Lambda settings, not just different error rates. And the y-axis label renders p underscore L in plain text while the subtitle uses HTML subscript.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "still": 7.0
+      },
+      "new_visual_element": "Still — Lambda at ~3.2, overhead table unchanged from start",
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 21.63,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Surface code suppression, visualized. The log-log encoding is correct. The gap annotation earns its place. The one fix that changes how students learn: link Lambda to the overhead panel.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Viz Riff — Willow Threshold",
+            "artifactHeading": "Surface Code Suppression",
+            "artifactLines": [
+              "Log-log slope encodes the exponent argument correctly",
+              "Gap annotation: two exact numbers on one visual axis",
+              "Lambda-to-overhead link is broken — one function call away from fixed",
+              "Willow dot is hardcoded — gap spans p-values, not just rates"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeVerdictArtifact verdict card",
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 12.03,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. I built a D3 surface code error rate sim. The Lambda slider controls suppression on the main chart but does not update the overhead calculator. Fix it: when Lambda changes, auto-update p_eff into the overhead's pPhysSlider so required-d and qubit counts update live. Also: move the Willow dot with Lambda — reposition its cx to xScale of p_th divided by Lambda — so the gap annotation shows formula delta at any Lambda, not a fixed Willow baseline. Show me the updated updateLambda function with both changes.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Your turn. I built a D3 surface code error rate sim. The Lambda slider controls suppression on the main chart but does not update the overhead calculator. Fix it: when Lambda changes, auto-update p_eff into the overhead's pPhysSlider so required-d and qubit counts update live. Also: move the Willow dot with Lambda — reposition its cx to xScale of p_th divided by Lambda — so the gap annotation shows formula delta at any Lambda, not a fixed Willow baseline. Show me the updated updateLambda function with both changes.",
+            "segment": "Surface Code Error Rates",
+            "greeting": "Your turn.",
+            "runningText": "thinking…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeComposerAsk YOUR TURN — paste-ready fix prompt",
+      "estimated_duration_s": 40.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 31.15,
+      "tail_silence_s": 0.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T00:17:45"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Willow Threshold Reconstruction — Viz Riff.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Willow Threshold Reconstruction — Viz Riff",
+            "slug": "viz-riff-willow-threshold-reconstruction",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "new_visual_element": "ClaudeTitleOutro title re-read",
+      "estimated_duration_s": 6.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 3.31,
+      "tail_silence_s": 1.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T00:17:45"
+      }
+    }
+  ]
+}

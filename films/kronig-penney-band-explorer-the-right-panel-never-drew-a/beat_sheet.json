@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "slug": "viz-riff-kronig-penney-explorer",
+    "title": "Kronig-Penney Band Explorer — The Right Panel Never Drew",
+    "topic": "CLAUDE · VIZ RIFF",
+    "skill": "viz-riff",
+    "book": "quantum-mechanics-vol3",
+    "sim": "vol3-kronig-penney-explorer.html",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "palette": "claude",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "clock": "narration",
+    "build": {
+      "at": "2026-08-29T13:23:41",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "narration_text": "Salaam. I'm Liam, in for Bear. Claude built this Kronig-Penney band structure explorer — two panels, one slider. Today we're not teaching band theory. We're judging whether this visualization actually does its job.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Salaam, Liam",
+            "topic": "KRONIG-PENNEY · VIZ RIFF",
+            "segment": "Band Structure Explorer",
+            "command": "Hey Claude, write me a visualization for Kronig-Penney band structure",
+            "runningText": "building band structure explorer…",
+            "output": [
+              "Two-panel: dispersion relation plus reduced zone E(k)",
+              "Interactive barrier slider P = 0 to 20",
+              "D3 CDN — runs entirely in browser"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 12.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the viz",
+      "narration_text": "Here's the default state. Left panel: f of alpha-a plotted against alpha-a, x-axis in pi units. The green band between plus-one and minus-one marks the allowed energy zone. Right panel: the reduced Brillouin zone — E versus k — with a dashed reference parabola. Two sliders up top: barrier strength P and bands shown. The readout strip promises P, Band 1 top, Gap 1 width, and a material-type label.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "media": {
+          "file": "media/output.mp4",
+          "cut": [
+            0,
+            7
+          ]
+        }
+      },
+      "new_visual_element": "Baseline capture — P=0 default state",
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 21.93,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "the mechanism",
+      "narration_text": "The P slider is the argument. P measures how hard the periodic barriers are to penetrate. At P equals zero, f is a pure cosine — never leaves the allowed band. Free electrons, no gaps. Drag P up: the curve punches through the ceiling and floor of the allowed zone. Those vertical red stripes in the left panel mark the forbidden energies. That's gap formation, happening in real time.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "media": {
+          "file": "media/change.mp4",
+          "cut": [
+            0,
+            10
+          ]
+        }
+      },
+      "new_visual_element": "P-slider sweep 0 to 20 — gap formation animated",
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 20.61,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "what it gets right",
+      "narration_text": "The left panel earns its keep. The formula is right there in the subtitle: cos ka equals cos alpha-a plus P over alpha-a times sin alpha-a. The green shading exactly tracks where f sits between plus-one and minus-one. As P grows, the allowed windows narrow and the gap stripes widen — and they land at exactly n-pi, where the physics puts them. The x-axis in pi units is the right call: zone boundaries read off the plot, no arithmetic required.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "media": {
+          "file": "media/change.mp4",
+          "still": 4
+        }
+      },
+      "new_visual_element": "Freeze at t=4s (P near 8) — three gap stripes visible in left chart",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 24.32,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "what it gets wrong",
+      "narration_text": "The right panel — the E of k band structure — is silently broken. Those colored band curves never appear. Here's why. The binary search that computes each curve declares flo with const, then tries to reassign it inside the bisection loop. TypeError in V8, every call, forever. The readout compounds this: Gap 1 width stays at zero. Type reads Metal no gaps at P equals twenty. A student sees a beautiful left chart and a ghost on the right — with no indication that half the visualization is gone.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "media": {
+          "file": "media/change.mp4",
+          "still": 8
+        }
+      },
+      "new_visual_element": "Freeze at t=8s (P near 16) — left shows large gaps, right chart empty, readout stale",
+      "estimated_duration_s": 30.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 26.35,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "narration_text": "Let's recap with Claude. The left panel correctly shows gap formation in alpha-a space — the formula is right, the shading is right, the axis choice is right. But the right panel — the one that maps this to E of k — never draws a single band curve. A one-word fix: change const to let on the binary search's flo variable. Everything wakes up.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Verdict",
+            "artifactHeading": "Kronig-Penney Band Explorer",
+            "artifactLines": [
+              "Left chart: dispersion encoding correct — gaps form at every zone boundary",
+              "Right chart: const flo reassignment — TypeError — zero band curves drawn",
+              "Readout: frozen at Metal no gaps for all P above zero",
+              "Fix: one word — const to let on line 243"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 18.03,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "narration_text": "Your turn. Here's the prompt. Fix the const flo bug — change const to let on the binary search's flo variable — then add a density-of-states panel computed from the band widths, and make the readout live so Type always reflects the current P value. Run this on the HTML file, drag the slider to P equals twenty, and watch both panels finally talk to each other.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "KRONIG-PENNEY · YOUR TURN",
+            "segment": "Fix and Extend",
+            "command": "I have a Kronig-Penney band structure explorer. The right-panel E(k) curves never render — const flo reassignment bug in the binary search (~line 243). Fix it (const to let), then: (1) add a density-of-states panel computed from band widths, and (2) update the readout so Type always reflects the current P value. Here is the full HTML:",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 25.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 19.39,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "narration_text": "Kronig-Penney Band Explorer — The Right Panel Never Drew. Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Kronig-Penney Band Explorer — The Right Panel Never Drew",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 7.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 5.01,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:23:41"
+      }
+    }
+  ]
+}

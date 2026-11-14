@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "slug": "viz-riff-chsh-angle-explorer",
+    "title": "CHSH Angle Explorer — The Formula the Dial Forgot",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "viz-riff critique: CHSH Angle Explorer — polar dial + four-correlation table + S gauge; polar geometry strong; CHSH formula never displayed; singlet subtitle stays wrong when state flips",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "build": {
+      "at": "2026-08-29T13:09:04",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Ciao. Liam, in for Bear. Someone typed into Claude: build me a CHSH angle explorer — show why forty-five degrees beats the classical bound. Here is what came back. Today we judge the visualization. The Bell test physics gets a pass.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the CHSH inequality — show why 45° measurement spacing beats the classical bound.",
+            "greeting": "Ciao, Liam",
+            "segment": "CHSH Angle Explorer",
+            "runningText": "building CHSH angle explorer…",
+            "output": [
+              "✓ CHSH Angle Explorer — Why 45° Wins",
+              "✓ polar dial + four-angle drag interaction",
+              "✓ S gauge — classical / quantum / Tsirelson zones"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "estimated_duration_s": 14.0,
+      "actual_duration_s": 13.29,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "Two columns. Left: a polar dial labeled Measurement Angles. Four arrows from center — A-one and A-two in solid and dashed red; B-one and B-two in solid and dashed blue. Degree tick marks at forty-five-degree steps, labeled around the rim. Four preset buttons below: Optimal, All Same, Exercise-3, and the singlet state. Right: a large S display — currently 2.8284 — with text reading QUANTUM VIOLATION. Below it a two-by-two correlation table showing E of A-one B-one through E of A-two B-two. An S gauge with threshold lines. And four angle sliders.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          6
+        ],
+        "file": "output.mp4"
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "estimated_duration_s": 25.0,
+      "actual_duration_s": 32.15,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "MECHANISM",
+      "narration_text": "A1 is Alice's first measurement angle. The capture sweeps it from zero to three-sixty while the other three angles hold at the optimal configuration. The A1 arrow sweeps the polar dial. Every correlation updates. S rises and falls. At zero degrees — optimal — S reaches 2.8284, two-root-two. Rotate A1 to ninety, same as A2, and S collapses near zero. The S box switches between red-bordered QUANTUM VIOLATION and plain LOCAL REALIST REGIME each time S crosses the classical threshold of two.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          9
+        ],
+        "file": "change.mp4"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "estimated_duration_s": 25.0,
+      "actual_duration_s": 29.87,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three things right. One: the polar dial makes the forty-five-degree argument visual. At optimal, four arrows partition the circle symmetrically — the geometry IS the claim. No algebra required. Two: the S gauge encodes three regimes in one bar — white inside the classical bound, red shading in the quantum region, blue dashes at the Tsirelson limit. You read which side of history S is on before you read the number. Three: the S box label changes state — QUANTUM VIOLATION, CLASSICAL BOUNDARY, LOCAL REALIST REGIME — only when the physics warrants it. The classification is tied to the value, not the aesthetics.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 1,
+        "file": "output.mp4"
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "estimated_duration_s": 30.0,
+      "actual_duration_s": 32.73,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Two fixable problems. First: click the singlet preset. The correlation values correctly flip sign — but the subtitle still reads the triplet formula, E equals cosine for phi-plus. The equation stays on screen while the numbers contradict it. The fix is one line of JavaScript. Second: the CHSH formula — S equals E-eleven plus E-twelve plus E-twenty-one MINUS E-twenty-two — is never shown. The correlation table has all four E values. But the asymmetric minus sign on the last term — the one structural reason a local model cannot reach two-root-two — is invisible. A student leaves without knowing why one correlation is subtracted.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 1,
+        "file": "output.mp4"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "estimated_duration_s": 30.0,
+      "actual_duration_s": 35.43,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Polar dial makes the forty-five-degree geometry visual — the argument lives in the arrow layout. Three color zones on the S gauge place S in its regime before the number is read. Singlet preset flips E values correctly but leaves the triplet equation in the subtitle — the formula is now wrong on screen. The CHSH formula with its asymmetric minus sign on E of A-two B-two is never displayed. Best used after students know the inequality. The one fix: add that formula between the correlation table and the S box.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "CHSH Angle Explorer",
+            "artifactHeading": "Riff Verdict",
+            "artifactLines": [
+              "Polar dial makes 45° geometry visual — argument is in the arrow layout",
+              "S gauge encodes three regimes — classical / quantum / Tsirelson in one bar",
+              "Singlet preset flips correlations correctly but leaves triplet equation in subtitle",
+              "CHSH formula S = E₁₁ + E₁₂ + E₂₁ − E₂₂ never displayed — minus sign invisible"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "estimated_duration_s": 25.0,
+      "actual_duration_s": 29.67,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "I have a CHSH Angle Explorer simulation in single-file HTML. It has a polar dial with four draggable measurement angles for Alice and Bob, a live S parameter display, a two-by-two correlation table, an S gauge, and angle sliders. Two fixes needed. One: add the CHSH formula — S equals E of A1 B1, plus E of A1 B2, plus E of A2 B1, MINUS E of A2 B2 — as a displayed element in the UI, positioned between the correlation table and the S box, with the minus sign on E of A2 B2 visually highlighted in a contrasting color. Two: make the subtitle equation dynamic — when the singlet button is clicked update it to show E equals negative cosine of the angle difference for the psi-minus state; when the triplet is restored revert to the phi-plus formula.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a CHSH Angle Explorer simulation in single-file HTML. It has a polar dial with four draggable measurement angles for Alice and Bob, a live S parameter display, a two-by-two correlation table, an S gauge, and angle sliders. Two fixes needed. One: add the CHSH formula — S = E(A1,B1) + E(A1,B2) + E(A2,B1) − E(A2,B2) — as a displayed element in the UI, positioned between the correlation table and the S box, with the minus sign on E(A2,B2) visually highlighted in a contrasting color. Two: make the subtitle equation dynamic — when the singlet button is clicked update it to show E = −cos(θ_a−θ_b) for |Ψ−⟩; when the triplet is restored revert to the |Φ+⟩ formula.",
+            "greeting": "Your turn.",
+            "segment": "CHSH Angle Explorer",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "estimated_duration_s": 40.0,
+      "actual_duration_s": 42.9,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:09:04"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "CHSH Angle Explorer — The Formula the Dial Forgot. At NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "CHSH Angle Explorer — The Formula the Dial Forgot",
+            "slug": "viz-riff-chsh-angle-explorer",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "estimated_duration_s": 5.0,
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 5.31,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T13:09:04"
+      }
+    }
+  ]
+}

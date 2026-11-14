@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "slug": "viz-riff-nv-odmr-field-map",
+    "title": "NV Center ODMR Field Map — A Static Checker in a Live Simulation",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "skill": "viz-riff",
+    "book": "quantum-mechanics-vol4",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "palette": "claude",
+    "register": "Teardown",
+    "persona": "Liam",
+    "build": {
+      "at": "2026-08-28T23:33:06",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Merhaba, Liam. Someone asks Claude: write me a visualization of NV center ODMR and the magnetic field map. Here is what comes back — and this is Liam, in for Bear. We are judging the viz, not the quantum physics.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for NV center ODMR — magnetic field map.",
+            "greeting": "Merhaba, Liam",
+            "segment": "NV Center ODMR Field Map",
+            "runningText": "building visualization…",
+            "output": [
+              "✓ NV Center ODMR — Magnetic Field Map",
+              "✓ D3 CDN — no build step",
+              "✓ slider: B (0–50 mT) wired"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 14.0,
+      "actual_duration_s": 12.03,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ CLEAN",
+      "narration_text": "Here is the visualization at default. Top left: a Lorentzian dip in fluorescence intensity versus microwave frequency — one red curve, one deep notch at 2870 megahertz. Right: a numerical info panel showing field, resonance frequencies, and splitting. Bottom left: splitting versus field — a black theory line with a red tracking dot. Bottom right: three pre-loaded physics checks.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          7.5
+        ],
+        "file": "output.mp4"
+      },
+      "estimated_duration_s": 18.0,
+      "actual_duration_s": 21.61,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The slider runs Applied field B from zero to fifty millitesla. At B equals zero: one dip, because the two spin states are degenerate. Pull the field up and the dip splits — one branch shifts up by gamma times B, the other shifts down. The bottom chart's red dot tracks where you are on the linear theory line. That slider is directly encoding the Zeeman effect.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          13.4
+        ],
+        "file": "change.mp4"
+      },
+      "estimated_duration_s": 22.0,
+      "actual_duration_s": 19.54,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three things this viz earns. First: the dual-panel design — spectrum and splitting-versus-field live side by side. The red dot confirms linearity without words. Second: annotation lines appear only when the dips separate past two millitesla — no visual noise at B equals zero. Third: the constants panel is always on screen — D, gamma, the formula, contrast, linewidth. The simulation shows its work.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 6.5,
+        "file": "change.mp4"
+      },
+      "estimated_duration_s": 22.0,
+      "actual_duration_s": 21.7,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Two real problems. The y-axis floor is 0.2, not zero. Nothing explains this — a student could read the dip depth as physics rather than a display choice. And the Physics Checks panel: it looks like live verification, but it is not. It is computed once on page load for three hardcoded test cases. Drag the slider to fifty millitesla and the checks still say B equals ten — they are a snapshot, not a monitor. That is the one fix that matters: make those checks dynamic.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 2.0,
+        "file": "output.mp4"
+      },
+      "estimated_duration_s": 25.0,
+      "actual_duration_s": 25.13,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Dual-chart links spectrum to field linearity. Annotations appear only when they are meaningful. Constants are permanently visible. Physics Checks look live — they are not. Y-axis floor needs a note. One fix: dynamic checks that follow the slider. Use this in an undergraduate AMO lab, after introducing the Zeeman effect — it earns its place.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "NV Center ODMR Field Map — Verdict",
+            "artifactHeading": "Riff Verdict",
+            "artifactLines": [
+              "Dual-chart links spectrum to field linearity",
+              "Annotations appear only when meaningful (B > 2 mT)",
+              "Constants panel always on screen — sim shows its work",
+              "Physics Checks are static — not updated by the slider",
+              "Y-axis floor 0.2 needs a display note",
+              "One fix: make the check panel track the current B value"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 22.0,
+      "actual_duration_s": 19.05,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Here is the prompt. I have an NV center ODMR simulation that shows the Zeeman splitting as a field is applied. The Physics Checks panel computes three test cases at page load and never updates. Rewrite the panel to be dynamic: as I drag the slider, show the check against the current B value — computed live, not hardcoded. Also add a note near the y-axis explaining that the floor at 0.2 reflects a thirty percent fluorescence contrast, not a physical minimum. Keep the single-file D3 format. That is the prompt. Run it — see what Claude repairs first.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have an NV center ODMR simulation. The Physics Checks panel computes three test cases at page load and never updates. Rewrite the panel to be dynamic: as I drag the slider, show the check against the current B value — computed live, not hardcoded. Also add a note near the y-axis: the floor at 0.2 reflects a 30% fluorescence contrast, not a physical minimum. Keep the single-file D3 format.",
+            "greeting": "Your turn.",
+            "segment": "NV Center ODMR Field Map",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 36.0,
+      "actual_duration_s": 30.4,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:33:06"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "NV Center ODMR Field Map — A Static Checker in a Live Simulation. Liam, in for Bear.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "NV Center ODMR Field Map — A Static Checker in a Live Simulation",
+            "slug": "viz-riff-nv-odmr-field-map",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 7.0,
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 6.08,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-28T23:33:06"
+      }
+    }
+  ]
+}

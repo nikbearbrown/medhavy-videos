@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "slug": "viz-riff-debroglie-scale",
+    "title": "de Broglie Wavelength Scale — Does the Ruler Actually Work?",
+    "topic": "@NikBearBrown",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-25T17:28:57",
+      "cut": "review",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Bonjour, Liam. Claude built this de Broglie wavelength scale. Our job today is not to teach quantum mechanics — it's to judge whether this visualization does what a visualization should do.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the de Broglie wavelength scale.",
+            "greeting": "Bonjour, Liam",
+            "runningText": "building scale viz…",
+            "segment": "de Broglie Scale",
+            "output": [
+              "✓ 30-decade wavelength ruler, color-coded zones",
+              "✓ mass slider: electron → human (31 decades)",
+              "✓ log-log λ vs E chart with slope annotation"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 10.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "The formula lives in the header: lambda equals h-over-p, or h-over-root-2mK. Below it, a ruler spanning thirty decades of wavelength — ten to the negative thirty-six meters to ten to the negative six. Controls sit in the middle: a mass slider, an energy slider, four presets. To the right: the computed wavelength in large red text, a diffraction flag, and a four-box info grid. The bottom panel is a log-log plot of lambda versus energy.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          8
+        ],
+        "file": "output.mp4"
+      },
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 23.42,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The mass slider is the primary control. It spans from electron mass — nine-by-ten-to-the-minus-thirty-one kilograms — to human mass at seventy kilograms. The formula says lambda equals h over root-2-m-K. As mass rises, wavelength falls as the square root. Watch the ruler pointer walk left: out of the diffractable zone, through borderline, into classical, and eventually into values that no physical instrument can measure.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "cut": [
+          0,
+          13.5
+        ],
+        "file": "change-mass.mp4"
+      },
+      "estimated_duration_s": 22.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 22.63,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three encodings work. The ruler's color zones carry redundant labels — both fill color and text. A colorblind student reads 'DIFFRACTABLE' in ink; they don't need the red. The log-log chart labels its slope: the dashed segment marked 'slope equals negative one-half' encodes lambda-proportional-to-E-to-the-minus-half as a visible fact. And the info box shows lambda divided by d-Si, the silicon lattice spacing — the diffraction threshold expressed as a ratio, not just a pointer on a ruler.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 2,
+        "file": "output.mp4"
+      },
+      "new_visual_element": "Freeze at t=2s: baseline electron 54 eV — DIFFRACTABLE zone pointer, slope annotation, λ/d_Si info box",
+      "estimated_duration_s": 26.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 26.28,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three encodings fail. The ruler labels only every third decade. Between labeled ticks, there are no numbers — a student cannot read the wavelength at a reference marker without mental arithmetic. The seventy-kilogram one-meter-per-second preset triggers a hidden velocity mode: neither toggle button highlights, the velocity slider appears without announcement, and once the student clicks another preset, it's gone. Finally: the diffraction zone boundary is pinned exclusively to silicon lattice spacing. A student could reasonably conclude diffraction requires silicon.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture"
+      },
+      "media": {
+        "still": 11,
+        "file": "change-mass.mp4"
+      },
+      "new_visual_element": "Freeze at t=11s: human mass state — 1.9e-26 m, 'Classically negligible', pointer off left of zone",
+      "estimated_duration_s": 27.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 30.19,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Three-zone ruler with redundant text labels. Log-log slope annotation makes the power law legible. Lambda-over-d-Si ratio frames the diffraction threshold correctly. The one fix that matters: make the velocity mode reachable through the toggle. Right now the human preset is a black-box button, not an explorable slider.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "de Broglie Wavelength Scale",
+            "artifactHeading": "Riff Verdict",
+            "artifactLines": [
+              "Three-zone ruler with redundant text labels",
+              "Log-log slope annotation makes the power law legible",
+              "λ/d_Si ratio frames the diffraction threshold correctly",
+              "Fix: expose velocity mode as a real toggle"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 19.31,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. Open this simulation and extend it. First, add a Fixed Velocity toggle button beside Fixed Energy and Thermal, with a velocity slider mapping from zero-point-zero-one meters per second to ten thousand meters per second on a log scale. Second, label the ruler axis at every decade — not just every third. Third, rename the lambda-over-d-Si box to lambda-over-d-crystal and add a note explaining that silicon is one example of typical lattice spacings. Keep everything in one HTML file with D3 from CDN.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Open this de Broglie wavelength scale simulation and extend it. 1. Add a Fixed Velocity toggle beside Fixed Energy and Thermal, with a velocity slider mapping 0.01–10,000 m/s on a log scale. 2. Label the ruler axis at every decade — not just every third. 3. Rename the λ/d_Si box to λ/d_crystal and add a note: 'Si (111) d = 0.31 nm is one example of typical lattice spacings.' Keep one HTML file, D3 from CDN.",
+            "greeting": "Your turn.",
+            "segment": "de Broglie Scale",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 32.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 30.61,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:28:57"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "de Broglie Wavelength Scale, judged. Liam, at NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "de Broglie Wavelength Scale — Does the Ruler Actually Work?",
+            "slug": "viz-riff-debroglie-scale",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 5.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.46,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T17:28:57"
+      }
+    }
+  ]
+}

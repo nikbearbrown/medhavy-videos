@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "slug": "viz-riff-sinc-squared-to-golden-rule",
+    "title": "Sinc² to Golden Rule — Does the Viz Show the Physics?",
+    "topic": "CLAUDE · VIZ RIFF",
+    "purpose": "Critique the sinc²(δT/2)→δ(δ) Fermi's Golden Rule D3 viz from quantum-mechanics-vol3",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "register": "Teardown",
+    "build": {
+      "at": "2026-08-26T23:01:15",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Bonjour. Liam, in for Bear. Someone asked Claude to visualize how the sinc-squared function converges to a Dirac delta as interaction time grows — the kernel step inside Fermi's Golden Rule. We are judging the visualization, not the physics.",
+      "estimated_duration_s": 12.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Bonjour, Liam",
+            "command": "Hey Claude, write me a visualization for the sinc-squared to delta-function limit in Fermi's Golden Rule.",
+            "segment": "Sinc² to Golden Rule",
+            "runningText": "building visualization…",
+            "output": [
+              "✓ Fermi's Golden Rule — sinc²(δT/2) → δ(δ)",
+              "✓ D3 CDN, no build step",
+              "✓ T-slider + log/linear toggle wired"
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "claude-sonnet"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 13.74,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three sinc-squared curves on a log y-axis: T equals 1 in black, 10 in gray, 100 in red. A dashed fourth curve tracks the T-slider, currently at 5. The x-axis runs from negative four-pi to positive four-pi in detuning delta. Top-right: a log-log panel shows peak height and area versus T, with slope annotations. Below it, a physics console verifying three numerical ratios. Bottom-right: a linear plot of the area integral two-pi-T against T.",
+      "estimated_duration_s": 25.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT media/output.mp4 — baseline hold, T-slider at 5",
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 26.79,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "The T slider drives T from 1 to 100. The function is T-squared times sinc-squared of delta-T over 2. As T grows, the peak rises as T-squared, the half-width shrinks as 1 over T, and the area scales linearly as 2-pi-T. The viewer's prediction question: where does this sequence go? A function with growing peak, shrinking width, and constant area-per-T — converging to a Dirac delta.",
+      "estimated_duration_s": 28.0,
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT media/change.mp4 — T-slider sweep 1 to 100",
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 20.93,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three wins. First, the log scale is the right encoding here. Without it, T equals 100 obliterates T equals 1 and 10 — four orders of magnitude in peak height on a single chart. Log scale makes all three coexist and readable. Second, the physics console is genuine: three self-checking ratios computed live — peak ratio 100, width ratio 0.1, area ratio 10. The student can verify the equations are honest, not just trusted. Third, the log-log scaling panel: slope-2 for peak, slope-1 for area, labeled and drawn in the data itself. That is the power law argument made visible, not stated.",
+      "estimated_duration_s": 42.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "Freeze: media/B03.png — default view, all three reference curves visible on log axis",
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 34.09,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two problems. First, the critical one: the x-axis is fixed at plus-or-minus four-pi, calibrated to T equals 1. At T equals 100, the first zero of sinc-squared lands at delta equals 2-pi over 100 — 0.06, which is one-half percent of the axis width. The peak you are supposed to see sharpening into a delta function is physically invisible — a single-pixel red line. The fix: zoom the x-axis with T. Show delta from minus-10 over T to plus-10 over T so the peak always fills the frame and the convergence becomes an animation the student can watch. Second: the top-right panel y-axis is labeled only 'value' — uninformative for a panel whose entire purpose is to show two distinct power-law scalings.",
+      "estimated_duration_s": 46.0,
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "Freeze: media/B04.png — T-slider at 100, dashed curve invisible inside fixed T=100 curve",
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 40.32,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Let's recap with Claude. Log scale and live physics checks earn this visualization real classroom time — but the fixed x-axis hides the one thing it's supposed to show: the delta function limit becoming visible. Fix the x-axis zoom first, then deploy.",
+      "estimated_duration_s": 14.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Sinc² to Golden Rule — Verdict",
+            "artifactHeading": "Viz Riff",
+            "artifactLines": [
+              "Log y-scale: correct — lets T=1, 10, 100 coexist across 4 orders of magnitude",
+              "Physics console: self-checking ratios, genuine verification",
+              "Fixed x-axis at ±4π hides the delta-function convergence entirely",
+              "Area panel annotation reverses the causal logic of the limit",
+              "Fix: zoom x as ±10/T so the sharpening is visible before deploying"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 14.66,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "I have a D3 visualization of the sinc-squared of delta-T over 2 converging to a Dirac delta — Fermi's Golden Rule. The x-axis is fixed at plus or minus four-pi. At T equals 100, the peak sharpens to a single pixel and the convergence is invisible. Rewrite the x-axis domain to zoom with T: show delta from minus 10 over T to plus 10 over T, so the peak always fills roughly half the plot width. Keep all four curves — T equals 1, 10, and 100 as fixed references, and the slider curve — but clip them to the zoomed window. Add a small annotation showing the first zero location at 2-pi over T. Keep the physics console and the log-linear toggle unchanged.",
+      "estimated_duration_s": 48.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "segment": "Sinc² to Golden Rule",
+            "command": "I have a D3 visualization of sinc²(δT/2) → δ(δ) for Fermi's Golden Rule. The x-axis is fixed at ±4π. At T=100 the peak sharpens to a single pixel and the convergence is invisible. Rewrite the x-axis domain to zoom with T: show δ from −10/T to +10/T so the peak always fills roughly half the plot width. Keep all four curves (T=1, 10, 100 as fixed references and the slider curve) clipped to the zoomed window. Add a small annotation showing the first zero at 2π/T. Keep the physics console and log/linear toggle unchanged.",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 37.8,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:01:15"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "tail_silence_s": 1.0,
+      "narration_text": "Sinc-squared to Golden Rule — does the viz show the physics. At NikBearBrown.",
+      "estimated_duration_s": 5.0,
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Sinc² to Golden Rule — Does the Viz Show the Physics?",
+            "slug": "viz-riff-sinc-squared-to-golden-rule",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.89,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-26T23:01:15"
+      }
+    }
+  ]
+}

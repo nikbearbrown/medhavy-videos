@@ -1,0 +1,249 @@
+{
+  "metadata": {
+    "slug": "claude-liam-double-slit-finished",
+    "title": "Why One Electron at a Time Still Builds Stripes",
+    "skill": "higgsfield-finish",
+    "channel": "claude-liam",
+    "palette": "claude",
+    "style_preset": "claude",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "clock": "narration",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "caption_policy": "none",
+    "source": "/Users/bear/Documents/CoWork/bear-textbooks/books/quantum-mechanics/youtube/double-slit-higgsfield/double-slit-papercraft-original.mp4"
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "narration_text": "Hola. This is Liam, in for Bear. How can electrons arriving one at a time build stripes? Watch the dots accumulate, then see how quantum mechanics predicts their pattern.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "persona": "liam",
+      "lane": "bookend",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Why do individual electron detections build stripes?",
+            "greeting": "Hola, Liam",
+            "topic": "Quantum Mechanics",
+            "segment": "Why One Electron at a Time Still Builds Stripes",
+            "runningText": "exploring the double slit…",
+            "output": [
+              "One electron → one dot",
+              "Many detections → a pattern"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-15T19:41:55.715196+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0,
+            "event": "Reveal the relevant question or relation; hold after speech."
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 9.69
+    },
+    {
+      "beat_id": "B01",
+      "narration_text": "An electron makes one localized detection. The stripes describe many repeated detections, not the route of one electron. The paper waves are a model of probability amplitudes.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "persona": "liam",
+      "lane": "bookend",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "The stripes record\none electron’s route.",
+            "triggerWords": "one electron’s route",
+            "replacementWords": "many repeated detections",
+            "seed": "double-slit-finish-20261015",
+            "fontSize": 84,
+            "mistakeRate": 0,
+            "brandLabel": "@NikBearBrown",
+            "contextTitle": "Before the Animation",
+            "contextItems": [
+              {
+                "label": "Detection",
+                "detail": "One localized arrival."
+              },
+              {
+                "label": "Amplitude",
+                "detail": "A contribution to the probability calculation."
+              }
+            ]
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-15T19:58:03.080415+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0,
+            "event": "Reveal the relevant question or relation; hold after speech."
+          }
+        ]
+      },
+      "lead_silence_s": 0.8,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 11.424,
+      "audio_padding_applied": "adelay=800:all=1"
+    },
+    {
+      "beat_id": "B02",
+      "narration_text": "",
+      "kind": "source_report",
+      "clock": "source",
+      "audio_policy": "preserve",
+      "shot": {
+        "type": "SOURCE_REPORT",
+        "source": "own"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "narration_text": "",
+      "kind": "source_report",
+      "clock": "source",
+      "audio_policy": "preserve",
+      "shot": {
+        "type": "SOURCE_REPORT",
+        "source": "own"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "narration_text": "Add the two amplitudes first, then square the size of their sum. The subscripts label the two slits. P is the probability for the chosen detector bin. Opposite equal amplitudes give zero; aligned amplitudes reinforce.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "persona": "liam",
+      "lane": "bookend",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "TypesetMath",
+          "props": {
+            "title": "Add Amplitudes, Then Square",
+            "rows": [
+              {
+                "src": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjQzOXB0IiBoZWlnaHQ9IjQ3cHQiIHZpZXdCb3g9IjAgMCA0MzkgNDciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj4KIDxtZXRhZGF0YT4KICA8cmRmOlJERiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgIDxjYzpXb3JrPgogICAgPGRjOnR5cGUgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIvPgogICAgPGRjOmRhdGU+MjAyNi0xMC0xNVQxNTo1NzoyNS4xNDMxNTU8L2RjOmRhdGU+CiAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgIDxkYzpjcmVhdG9yPgogICAgIDxjYzpBZ2VudD4KICAgICAgPGRjOnRpdGxlPk1hdHBsb3RsaWIgdjMuMTAuNywgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy88L2RjOnRpdGxlPgogICAgIDwvY2M6QWdlbnQ+CiAgICA8L2RjOmNyZWF0b3I+CiAgIDwvY2M6V29yaz4KICA8L3JkZjpSREY+CiA8L21ldGFkYXRhPgogPGRlZnM+CiAgPHN0eWxlIHR5cGU9InRleHQvY3NzIj4qe3N0cm9rZS1saW5lam9pbjogcm91bmQ7IHN0cm9rZS1saW5lY2FwOiBidXR0fTwvc3R5bGU+CiA8L2RlZnM+CiA8ZyBpZD0iZmlndXJlXzEiPgogIDxnIGlkPSJwYXRjaF8xIj4KICAgPHBhdGggZD0iTSAwIDQ3IApMIDQzOSA0NyAKTCA0MzkgMCAKTCAwIDAgCkwgMCA0NyAKegoiIHN0eWxlPSJmaWxsOiBub25lIi8+CiAgPC9nPgogIDxnIGlkPSJ0ZXh0XzEiPgogICA8IS0tICRhPWFfQSthX0IsXHFxdWFkIFA9fGF8XjIkIC0tPgogICA8ZyBzdHlsZT0iZmlsbDogIzNkMzkyOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA0MCkgc2NhbGUoMC40OCAtMC40OCkiPgogICAgPGRlZnM+CiAgICAgPHBhdGggaWQ9IlNUSVhHZW5lcmFsLUl0YWxpYy02MSIgZD0iTSAyOTYzIDcxMCAKTCAzMDQ2IDY0MCAKUSAyNjg4IDIwNSAyNTE4IDcwIApRIDIzNDkgLTY0IDIxNTcgLTY0IApRIDE5MDEgLTY0IDE5MDEgMTk4IApRIDE5MDEgMzU4IDIwNDggOTM0IApRIDE2OTAgMzk3IDEzODkgMTYzIApRIDEwODggLTcwIDc0OSAtNzAgClEgNDY3IC03MCAyODggMTI1IApRIDEwOSAzMjAgMTA5IDY3MiAKUSAxMDkgMTE1OCAzODcgMTY2NCAKUSA2NjYgMjE3MCAxMDk0IDI0OTYgClEgMTUyMyAyODIyIDE5MzkgMjgyMiAKUSAyMzY4IDI4MjIgMjQ1MSAyNDUxIApMIDI1MjIgMjc1OCAKTCAyNTQxIDI3NzggCkwgMjkzMSAyODIyIApMIDI5NzYgMjgwMyAKUSAyOTcwIDI3NzggMjkzOCAyNjY5IApRIDIzNjggNTk1IDIzNjggMzQ2IApRIDIzNjggMjYyIDI0NTggMjYyIApRIDI1NTQgMjYyIDI3OTAgNTI1IApMIDI5NjMgNzEwIAp6Ck0gMjMzNiAyMzEwIApRIDIzMzYgMjQ3NyAyMjQwIDI1NzkgClEgMjE0NCAyNjgyIDE5NzggMjY4MiAKUSAxNTQyIDI2ODIgMTEzOSAyMDkzIApRIDkyOCAxNzc5IDc4NyAxMzk1IApRIDY0NiAxMDExIDY0NiA3MTcgClEgNjQ2IDI0MyAxMDMwIDI0MyAKUSAxNDA4IDI0MyAxODQzIDg3MCAKUSAyMzM2IDE1ODEgMjMzNiAyMzEwIAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtUmVndWxhci0zZCIgZD0iTSA0MDc3IDIwNDggCkwgMzA3IDIwNDggCkwgMzA3IDI0NzAgCkwgNDA3NyAyNDcwIApMIDQwNzcgMjA0OCAKegpNIDQwNzcgNzY4IApMIDMwNyA3NjggCkwgMzA3IDExOTAgCkwgNDA3NyAxMTkwIApMIDQwNzcgNzY4IAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtSXRhbGljLTQxIiBkPSJNIDM2MTAgMCAKTCAyMDQyIDAgCkwgMjA0MiAxMDIgClEgMjMzMCAxMTUgMjQzMiAxOTIgClEgMjUzNCAyNjkgMjUzNCA0NDIgClEgMjUzNCA0OTMgMjUyMiA2MDggCkwgMjM5NCAxNDQ2IApMIDk4NiAxNDQ2IApMIDYwOCA3MzYgClEgNDY3IDQ3NCA0NjcgMzE0IApRIDQ2NyAxMjIgODY0IDEwMiAKTCA4NjQgMCAKTCAtMzI2IDAgCkwgLTMyNiAxMDIgClEgLTEwOSAxNDcgMjggMzA3IApRIDE2NiA0NjcgNTMxIDExMDEgCkwgMjM1NSA0Mjc1IApMIDI1MjIgNDI3NSAKTCAzMTEwIDczNiAKUSAzMTc0IDMzOSAzMjY0IDIzMCAKUSAzMzU0IDEyMiAzNjEwIDEwMiAKTCAzNjEwIDAgCnoKTSAyMzYyIDE2NzcgCkwgMjA3NCAzMzYwIApMIDExMjAgMTY3NyAKTCAyMzYyIDE2NzcgCnoKIiB0cmFuc2Zvcm09InNjYWxlKDAuMDE1NjI1KSIvPgogICAgIDxwYXRoIGlkPSJTVElYR2VuZXJhbC1SZWd1bGFyLTJiIiBkPSJNIDQwNzAgMTQwOCAKTCAyNDAwIDE0MDggCkwgMjQwMCAtMjYyIApMIDE5NzggLTI2MiAKTCAxOTc4IDE0MDggCkwgMzA3IDE0MDggCkwgMzA3IDE4MzAgCkwgMTk3OCAxODMwIApMIDE5NzggMzUwMSAKTCAyNDAwIDM1MDEgCkwgMjQwMCAxODMwIApMIDQwNzAgMTgzMCAKTCA0MDcwIDE0MDggCnoKIiB0cmFuc2Zvcm09InNjYWxlKDAuMDE1NjI1KSIvPgogICAgIDxwYXRoIGlkPSJTVElYR2VuZXJhbC1JdGFsaWMtNDIiIGQ9Ik0gODMyIDQxNzkgCkwgMjQzMiA0MTc5IApRIDM3NjMgNDE3OSAzNzYzIDMyMTkgClEgMzc2MyAyNzcxIDMzNTQgMjQ5NiAKUSAzMTM2IDIzNDkgMjY0MyAyMjQ2IApMIDI2NDMgMjI0MCAKUSAzNDUwIDE5OTcgMzQ1MCAxMjgwIApRIDM0NTAgNjUzIDI5NzMgMzI2IApRIDI0OTYgMCAxNjkwIDAgCkwgLTUxIDAgCkwgLTUxIDEwMiAKUSAyMTEgMTQxIDMwNCAyMzAgClEgMzk3IDMyMCA0ODAgNjE0IApMIDEyNTQgMzQwNSAKUSAxMzI1IDM2NTQgMTMyNSAzODE0IApRIDEzMjUgMzk1NSAxMjI5IDQwMDMgClEgMTEzMyA0MDUxIDgzMiA0MDc3IApMIDgzMiA0MTc5IAp6Ck0gMTU4NyAyMzIzIApMIDE4MzAgMjMyMyAKUSAyNDU4IDIzMjMgMjc4NyAyNTcyIApRIDMxMTcgMjgyMiAzMTE3IDMyOTYgClEgMzExNyAzNjU0IDI5MzcgMzgyMCAKUSAyNzU4IDM5ODcgMjM2OCAzOTg3IApRIDIyMjEgMzk4NyAyMTY2IDM5NzcgClEgMjExMiAzOTY4IDIwNjcgMzkyMCAKUSAyMDIyIDM4NzIgMTk5MCAzNzU3IApMIDE1ODcgMjMyMyAKegpNIDE1MjMgMjExOCAKTCAxMzE4IDEzNTcgClEgMTA5NCA1MDYgMTA5NCA0NjEgClEgMTA5NCAxOTIgMTUyMyAxOTIgClEgMjA4NiAxOTIgMjQyMiA0NzMgClEgMjc1OCA3NTUgMjc1OCAxMjgwIApRIDI3NTggMTU2OCAyNjM2IDE3NzMgClEgMjUxNSAxOTc4IDIzMzAgMjA0MiAKUSAyMTEyIDIxMTggMTUyMyAyMTE4IAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtUmVndWxhci0yYyIgZD0iTSA1MzEgLTkwMiAKTCA0NjcgLTc4MSAKUSA5OTggLTQyMiA5OTggLTk2IApRIDk5OCAtMTMgOTA5IC0xMyAKUSA4ODMgLTEzIDgyMiAtMjUgClEgNzYyIC0zOCA3MjMgLTM4IApRIDM1MiAtMzggMzUyIDI4OCAKUSAzNTIgNDU0IDQ1NyA1NTMgClEgNTYzIDY1MyA3MzYgNjUzIApRIDk1NCA2NTMgMTEwMSA0OTYgClEgMTI0OCAzMzkgMTI0OCA5NiAKUSAxMjQ4IC0xOTggMTA1MyAtNDczIApRIDg1OCAtNzQ5IDUzMSAtOTAyIAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtSXRhbGljLTUwIiBkPSJNIDkzNCA0MTc5IApMIDI0NzcgNDE3OSAKUSAzODcyIDQxNzkgMzg3MiAzMjMyIApRIDM4NzIgMjk3NiAzNzUzIDI3MjkgClEgMzYzNSAyNDgzIDM0MzcgMjMxNyAKUSAyOTk1IDE5NTIgMjEyNSAxOTUyIApRIDE3NzMgMTk1MiAxNTQ5IDIwMDMgCkwgMTIxMCA3NjggClEgMTEyMCA0MjIgMTEyMCAzNjUgClEgMTEyMCAyNTAgMTIxNiAxODkgClEgMTMxMiAxMjggMTU2MiAxMDIgCkwgMTU2MiAwIApMIDAgMCAKTCAwIDEwMiAKUSAyNzUgMTQxIDM2MSAyMjcgClEgNDQ4IDMxNCA1MzggNjI3IApMIDEyODAgMzI3NyAKUSAxMzg5IDM2NjcgMTM4OSAzODA4IApRIDEzODkgMzkzNiAxMjk5IDM5OTAgClEgMTIxMCA0MDQ1IDkzNCA0MDc3IApMIDkzNCA0MTc5IAp6Ck0gMjA0OCAzNzg5IApMIDE2MDYgMjIyMSAKUSAxNzkyIDIxODkgMTkzOSAyMTg5IApRIDI0OTYgMjE4OSAyNzU4IDIzNDIgClEgMzIxMyAyNTk4IDMyMTMgMzIwMCAKUSAzMjEzIDM5ODcgMjM4MSAzOTg3IApRIDIwOTkgMzk4NyAyMDQ4IDM3ODkgCnoKIiB0cmFuc2Zvcm09InNjYWxlKDAuMDE1NjI1KSIvPgogICAgIDxwYXRoIGlkPSJTVElYR2VuZXJhbC1SZWd1bGFyLTdjIiBkPSJNIDg1MSAtOTAgCkwgNDI5IC05MCAKTCA0MjkgNDMyNiAKTCA4NTEgNDMyNiAKTCA4NTEgLTkwIAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtUmVndWxhci0zMiIgZD0iTSAzMDM0IDg3NyAKTCAyNjg4IDAgCkwgMTg2IDAgCkwgMTg2IDc3IApMIDEzMjUgMTI4NiAKUSAxNzczIDE3NTQgMTk2NSAyMTQ0IApRIDIxNTcgMjUzNCAyMTU3IDI5NTAgClEgMjE1NyAzMzc5IDE5MjAgMzYxNiAKUSAxNjgzIDM4NTMgMTI2NyAzODUzIApRIDkyMiAzODUzIDcyMCAzNjczIApRIDUxOCAzNDk0IDMyNiAzMDIxIApMIDE5MiAzMDUzIApRIDMwMSAzNjQ4IDYzMCAzOTg3IApRIDk2MCA0MzI2IDE1MjMgNDMyNiAKUSAyMDU0IDQzMjYgMjM4MCA0MDA2IApRIDI3MDcgMzY4NiAyNzA3IDMyMDAgClEgMjcwNyAyNDc3IDE4ODggMTYxMyAKTCA4MzIgNDg2IApMIDIzMzAgNDg2IApRIDI1NDEgNDg2IDI2NjUgNTY5IApRIDI3OTAgNjUzIDI5NDQgOTE1IApMIDMwMzQgODc3IAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgIDwvZGVmcz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLUl0YWxpYy02MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjQwOTM3NSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLVJlZ3VsYXItM2QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY0LjUzOTk4NyAwLjQwOTM3NSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLUl0YWxpYy02MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ3LjQ3OTk2OCAwLjQwOTM3NSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLUl0YWxpYy00MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTk3LjU3OTk1OSAtMTIuODE4NzUpIHNjYWxlKDAuNykiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLVJlZ3VsYXItMmIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1OS4xOTkzMjQgMC40MDkzNzUpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1JdGFsaWMtNjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0Mi4xMzkzMDUgMC40MDkzNzUpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1JdGFsaWMtNDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5Mi4yMzkyOTYgLTEyLjgxODc1KSBzY2FsZSgwLjcpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1SZWd1bGFyLTJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzkuNDE4NjY1IDAuNDA5Mzc1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtSXRhbGljLTUwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MjMuMjU4NjA5IDAuNDA5Mzc1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtUmVndWxhci0zZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjk4Ljc5ODU5NiAwLjQwOTM3NSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLVJlZ3VsYXItN2MiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDc4MS43Mzg1NzcgMC40MDkzNzUpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1JdGFsaWMtNjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwMS43Mzg1NjIgMC40MDkzNzUpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1SZWd1bGFyLTdjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NTEuODM4NTUzIDAuNDA5Mzc1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtUmVndWxhci0zMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODczLjM4MTgxOSAzNS42ODQzNzUpIHNjYWxlKDAuNykiLz4KICAgPC9nPgogIDwvZz4KIDwvZz4KPC9zdmc+Cg==",
+                "aspect": 9.340425531914894,
+                "expression": "a=a_A+a_B,\\qquad P=|a|^2",
+                "at": 0
+              },
+              {
+                "src": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjQwMXB0IiBoZWlnaHQ9IjQwcHQiIHZpZXdCb3g9IjAgMCA0MDEgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj4KIDxtZXRhZGF0YT4KICA8cmRmOlJERiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgIDxjYzpXb3JrPgogICAgPGRjOnR5cGUgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIvPgogICAgPGRjOmRhdGU+MjAyNi0xMC0xNVQxNTozMzozMi40MzMwNjQ8L2RjOmRhdGU+CiAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgIDxkYzpjcmVhdG9yPgogICAgIDxjYzpBZ2VudD4KICAgICAgPGRjOnRpdGxlPk1hdHBsb3RsaWIgdjMuMTAuNywgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy88L2RjOnRpdGxlPgogICAgIDwvY2M6QWdlbnQ+CiAgICA8L2RjOmNyZWF0b3I+CiAgIDwvY2M6V29yaz4KICA8L3JkZjpSREY+CiA8L21ldGFkYXRhPgogPGRlZnM+CiAgPHN0eWxlIHR5cGU9InRleHQvY3NzIj4qe3N0cm9rZS1saW5lam9pbjogcm91bmQ7IHN0cm9rZS1saW5lY2FwOiBidXR0fTwvc3R5bGU+CiA8L2RlZnM+CiA8ZyBpZD0iZmlndXJlXzEiPgogIDxnIGlkPSJwYXRjaF8xIj4KICAgPHBhdGggZD0iTSAwIDQwIApMIDQwMSA0MCAKTCA0MDEgMCAKTCAwIDAgCkwgMCA0MCAKegoiIHN0eWxlPSJmaWxsOiBub25lIi8+CiAgPC9nPgogIDxnIGlkPSJ0ZXh0XzEiPgogICA8IS0tICRhX0I9LWFfQVxxdWFkXFJpZ2h0YXJyb3dccXVhZCBQPTAkIC0tPgogICA8ZyBzdHlsZT0iZmlsbDogIzNkMzkyOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzMykgc2NhbGUoMC40OCAtMC40OCkiPgogICAgPGRlZnM+CiAgICAgPHBhdGggaWQ9IlNUSVhHZW5lcmFsLUl0YWxpYy02MSIgZD0iTSAyOTYzIDcxMCAKTCAzMDQ2IDY0MCAKUSAyNjg4IDIwNSAyNTE4IDcwIApRIDIzNDkgLTY0IDIxNTcgLTY0IApRIDE5MDEgLTY0IDE5MDEgMTk4IApRIDE5MDEgMzU4IDIwNDggOTM0IApRIDE2OTAgMzk3IDEzODkgMTYzIApRIDEwODggLTcwIDc0OSAtNzAgClEgNDY3IC03MCAyODggMTI1IApRIDEwOSAzMjAgMTA5IDY3MiAKUSAxMDkgMTE1OCAzODcgMTY2NCAKUSA2NjYgMjE3MCAxMDk0IDI0OTYgClEgMTUyMyAyODIyIDE5MzkgMjgyMiAKUSAyMzY4IDI4MjIgMjQ1MSAyNDUxIApMIDI1MjIgMjc1OCAKTCAyNTQxIDI3NzggCkwgMjkzMSAyODIyIApMIDI5NzYgMjgwMyAKUSAyOTcwIDI3NzggMjkzOCAyNjY5IApRIDIzNjggNTk1IDIzNjggMzQ2IApRIDIzNjggMjYyIDI0NTggMjYyIApRIDI1NTQgMjYyIDI3OTAgNTI1IApMIDI5NjMgNzEwIAp6Ck0gMjMzNiAyMzEwIApRIDIzMzYgMjQ3NyAyMjQwIDI1NzkgClEgMjE0NCAyNjgyIDE5NzggMjY4MiAKUSAxNTQyIDI2ODIgMTEzOSAyMDkzIApRIDkyOCAxNzc5IDc4NyAxMzk1IApRIDY0NiAxMDExIDY0NiA3MTcgClEgNjQ2IDI0MyAxMDMwIDI0MyAKUSAxNDA4IDI0MyAxODQzIDg3MCAKUSAyMzM2IDE1ODEgMjMzNiAyMzEwIAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtSXRhbGljLTQyIiBkPSJNIDgzMiA0MTc5IApMIDI0MzIgNDE3OSAKUSAzNzYzIDQxNzkgMzc2MyAzMjE5IApRIDM3NjMgMjc3MSAzMzU0IDI0OTYgClEgMzEzNiAyMzQ5IDI2NDMgMjI0NiAKTCAyNjQzIDIyNDAgClEgMzQ1MCAxOTk3IDM0NTAgMTI4MCAKUSAzNDUwIDY1MyAyOTczIDMyNiAKUSAyNDk2IDAgMTY5MCAwIApMIC01MSAwIApMIC01MSAxMDIgClEgMjExIDE0MSAzMDQgMjMwIApRIDM5NyAzMjAgNDgwIDYxNCAKTCAxMjU0IDM0MDUgClEgMTMyNSAzNjU0IDEzMjUgMzgxNCAKUSAxMzI1IDM5NTUgMTIyOSA0MDAzIApRIDExMzMgNDA1MSA4MzIgNDA3NyAKTCA4MzIgNDE3OSAKegpNIDE1ODcgMjMyMyAKTCAxODMwIDIzMjMgClEgMjQ1OCAyMzIzIDI3ODcgMjU3MiAKUSAzMTE3IDI4MjIgMzExNyAzMjk2IApRIDMxMTcgMzY1NCAyOTM3IDM4MjAgClEgMjc1OCAzOTg3IDIzNjggMzk4NyAKUSAyMjIxIDM5ODcgMjE2NiAzOTc3IApRIDIxMTIgMzk2OCAyMDY3IDM5MjAgClEgMjAyMiAzODcyIDE5OTAgMzc1NyAKTCAxNTg3IDIzMjMgCnoKTSAxNTIzIDIxMTggCkwgMTMxOCAxMzU3IApRIDEwOTQgNTA2IDEwOTQgNDYxIApRIDEwOTQgMTkyIDE1MjMgMTkyIApRIDIwODYgMTkyIDI0MjIgNDczIApRIDI3NTggNzU1IDI3NTggMTI4MCAKUSAyNzU4IDE1NjggMjYzNiAxNzczIApRIDI1MTUgMTk3OCAyMzMwIDIwNDIgClEgMjExMiAyMTE4IDE1MjMgMjExOCAKegoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMTU2MjUpIi8+CiAgICAgPHBhdGggaWQ9IlNUSVhHZW5lcmFsLVJlZ3VsYXItM2QiIGQ9Ik0gNDA3NyAyMDQ4IApMIDMwNyAyMDQ4IApMIDMwNyAyNDcwIApMIDQwNzcgMjQ3MCAKTCA0MDc3IDIwNDggCnoKTSA0MDc3IDc2OCAKTCAzMDcgNzY4IApMIDMwNyAxMTkwIApMIDQwNzcgMTE5MCAKTCA0MDc3IDc2OCAKegoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMTU2MjUpIi8+CiAgICAgPHBhdGggaWQ9IlNUSVhHZW5lcmFsLVJlZ3VsYXItMjIxMiIgZD0iTSAzOTc0IDE0MDggCkwgNDEwIDE0MDggCkwgNDEwIDE4MzAgCkwgMzk3NCAxODMwIApMIDM5NzQgMTQwOCAKegoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMTU2MjUpIi8+CiAgICAgPHBhdGggaWQ9IlNUSVhHZW5lcmFsLUl0YWxpYy00MSIgZD0iTSAzNjEwIDAgCkwgMjA0MiAwIApMIDIwNDIgMTAyIApRIDIzMzAgMTE1IDI0MzIgMTkyIApRIDI1MzQgMjY5IDI1MzQgNDQyIApRIDI1MzQgNDkzIDI1MjIgNjA4IApMIDIzOTQgMTQ0NiAKTCA5ODYgMTQ0NiAKTCA2MDggNzM2IApRIDQ2NyA0NzQgNDY3IDMxNCAKUSA0NjcgMTIyIDg2NCAxMDIgCkwgODY0IDAgCkwgLTMyNiAwIApMIC0zMjYgMTAyIApRIC0xMDkgMTQ3IDI4IDMwNyAKUSAxNjYgNDY3IDUzMSAxMTAxIApMIDIzNTUgNDI3NSAKTCAyNTIyIDQyNzUgCkwgMzExMCA3MzYgClEgMzE3NCAzMzkgMzI2NCAyMzAgClEgMzM1NCAxMjIgMzYxMCAxMDIgCkwgMzYxMCAwIAp6Ck0gMjM2MiAxNjc3IApMIDIwNzQgMzM2MCAKTCAxMTIwIDE2NzcgCkwgMjM2MiAxNjc3IAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgICA8cGF0aCBpZD0iU1RJWEdlbmVyYWwtUmVndWxhci0yMWQyIiBkPSJNIDU1NDIgMTY1MSAKTCA1NTQyIDE1ODcgClEgNTQyMSAxNDk4IDQ5NzYgMTE3MSAKUSA0NTMxIDg0NSA0MzI5IDY5MSAKUSA0MTI4IDUzOCAzNzk1IDI1NiAKUSAzNDYyIC0yNiAzMjAwIC0yODggCkwgMzA2NiAtMTYwIApRIDMzMzQgMTU0IDM1MzkgMzU4IApRIDM2ODYgNTA2IDM2ODYgNjI3IApRIDM2ODYgNjcyIDM2NDEgNzIwIApRIDM1OTcgNzY4IDM1MjAgNzY4IApMIDM4NCA3NjggCkwgMzg0IDExOTAgCkwgNDQ0OCAxMTkwIApRIDQ4MTkgMTQ0NiA0ODE5IDE2MTkgClEgNDgxOSAxODMwIDQ0NDIgMjA0OCAKTCAzODQgMjA0OCAKTCAzODQgMjQ3MCAKTCAzNTIwIDI0NzAgClEgMzU5NyAyNDcwIDM2NDEgMjUxOCAKUSAzNjg2IDI1NjYgMzY4NiAyNjExIApRIDM2ODYgMjY2OSAzNjY0IDI3MjAgClEgMzY0MiAyNzcxIDM2MjkgMjc4NCAKUSAzNjE2IDI3OTcgMzU0NiAyODc0IApRIDMyNzAgMzE2MiAzMDY2IDMzOTggCkwgMzIwMCAzNTI2IApRIDM0NjIgMzI2NCAzNzg4IDI5OTIgClEgNDExNSAyNzIwIDQzNDggMjU0NCAKUSA0NTgyIDIzNjggNDk2OSAyMDgwIApRIDUzNTcgMTc5MiA1NTQyIDE2NTEgCnoKIiB0cmFuc2Zvcm09InNjYWxlKDAuMDE1NjI1KSIvPgogICAgIDxwYXRoIGlkPSJTVElYR2VuZXJhbC1JdGFsaWMtNTAiIGQ9Ik0gOTM0IDQxNzkgCkwgMjQ3NyA0MTc5IApRIDM4NzIgNDE3OSAzODcyIDMyMzIgClEgMzg3MiAyOTc2IDM3NTMgMjcyOSAKUSAzNjM1IDI0ODMgMzQzNyAyMzE3IApRIDI5OTUgMTk1MiAyMTI1IDE5NTIgClEgMTc3MyAxOTUyIDE1NDkgMjAwMyAKTCAxMjEwIDc2OCAKUSAxMTIwIDQyMiAxMTIwIDM2NSAKUSAxMTIwIDI1MCAxMjE2IDE4OSAKUSAxMzEyIDEyOCAxNTYyIDEwMiAKTCAxNTYyIDAgCkwgMCAwIApMIDAgMTAyIApRIDI3NSAxNDEgMzYxIDIyNyAKUSA0NDggMzE0IDUzOCA2MjcgCkwgMTI4MCAzMjc3IApRIDEzODkgMzY2NyAxMzg5IDM4MDggClEgMTM4OSAzOTM2IDEyOTkgMzk5MCAKUSAxMjEwIDQwNDUgOTM0IDQwNzcgCkwgOTM0IDQxNzkgCnoKTSAyMDQ4IDM3ODkgCkwgMTYwNiAyMjIxIApRIDE3OTIgMjE4OSAxOTM5IDIxODkgClEgMjQ5NiAyMTg5IDI3NTggMjM0MiAKUSAzMjEzIDI1OTggMzIxMyAzMjAwIApRIDMyMTMgMzk4NyAyMzgxIDM5ODcgClEgMjA5OSAzOTg3IDIwNDggMzc4OSAKegoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMTU2MjUpIi8+CiAgICAgPHBhdGggaWQ9IlNUSVhHZW5lcmFsLVJlZ3VsYXItMzAiIGQ9Ik0gMzA0NiAyMTEyIApRIDMwNDYgMTY4MyAyOTYzIDEzMDIgClEgMjg4MCA5MjIgMjcxNyA2MDIgClEgMjU1NCAyODIgMjI2NiA5NiAKUSAxOTc4IC05MCAxNjAwIC05MCAKUSAxMjEwIC05MCA5MTUgMTA4IApRIDYyMSAzMDcgNDYxIDY0MCAKUSAzMDEgOTczIDIyNyAxMzUwIApRIDE1NCAxNzI4IDE1NCAyMTUwIApRIDE1NCAyNzQ2IDMwMSAzMjIyIApRIDQ0OCAzNjk5IDc5MCA0MDEyIApRIDExMzMgNDMyNiAxNjI2IDQzMjYgClEgMjI1MyA0MzI2IDI2NDkgMzcxMiAKUSAzMDQ2IDMwOTggMzA0NiAyMTEyIAp6Ck0gMjQzMiAyMDgwIApRIDI0MzIgMzA5MSAyMjE3IDM2MjUgClEgMjAwMyA0MTYwIDE1ODcgNDE2MCAKUSAxMTkwIDQxNjAgOTc5IDM2MjIgClEgNzY4IDMwODUgNzY4IDIxMDYgClEgNzY4IDExMjAgOTc5IDU5OCAKUSAxMTkwIDc3IDE2MDAgNzcgClEgMjAwMyA3NyAyMjE3IDU5OCAKUSAyNDMyIDExMjAgMjQzMiAyMDgwIAp6CiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAxNTYyNSkiLz4KICAgIDwvZGVmcz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLUl0YWxpYy02MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjQwNjI1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtSXRhbGljLTQyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MC4wOTk5OTEgLTEyLjgyMTg3NSkgc2NhbGUoMC43KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtUmVndWxhci0zZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTExLjcxOTM1NiAwLjQwNjI1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtUmVndWxhci0yMjEyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTQuNjU5MzM3IDAuNDA2MjUpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1JdGFsaWMtNjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI2My4xNTkzMjIgMC40MDYyNSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLUl0YWxpYy00MSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzEzLjI1OTMxMiAtMTIuODIxODc1KSBzY2FsZSgwLjcpIi8+CiAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVElYR2VuZXJhbC1SZWd1bGFyLTIxZDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0Ny4wNzg2NTkgMC40MDYyNSkiLz4KICAgIDx1c2UgeGxpbms6aHJlZj0iI1NUSVhHZW5lcmFsLUl0YWxpYy01MCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjI2LjMxODYyOCAwLjQwNjI1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtUmVndWxhci0zZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzAxLjg1ODYxNSAwLjQwNjI1KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjU1RJWEdlbmVyYWwtUmVndWxhci0zMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzg0Ljc5ODU5NiAwLjQwNjI1KSIvPgogICA8L2c+CiAgPC9nPgogPC9nPgo8L3N2Zz4K",
+                "aspect": 10.025,
+                "expression": "a_B=-a_A\\quad\\Rightarrow\\quad P=0",
+                "at": 8
+              }
+            ],
+            "note": "A and B: slit alternatives · P: probability in a detector bin",
+            "conditions": "Coherent alternatives · no which-path record"
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-10-15T19:58:31.907152+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0,
+            "event": "Reveal the relevant question or relation; hold after speech."
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 12.91
+    },
+    {
+      "beat_id": "B05",
+      "narration_text": "Predict what happens when two equal amplitude arrows point in opposite directions. Explain why adding their separate probabilities gives the wrong answer. Look for cancellation before squaring. Liam, in for Bear.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "persona": "liam",
+      "lane": "bookend",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "command": "Predict what happens when two equal amplitude arrows point in opposite directions. Explain why adding their separate probabilities gives the wrong answer.",
+            "topic": "Quantum Mechanics",
+            "segment": "Make a Prediction",
+            "runningText": "try this with Claude…",
+            "folderLabel": "@NikBearBrown",
+            "output": [
+              "Add the arrows first.",
+              "Then take the squared magnitude."
+            ]
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-10-15T19:37:47.105101+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0,
+            "event": "Reveal the relevant question or relation; hold after speech."
+          }
+        ]
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 12.27
+    },
+    {
+      "beat_id": "B06",
+      "narration_text": "Why One Electron at a Time Still Builds Stripes. At Nik Bear Brown.",
+      "engine": "kokoro",
+      "voice": "am_onyx",
+      "persona": "liam",
+      "lane": "bookend",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Why One Electron at a Time Still Builds Stripes",
+            "slug": "claude-liam-double-slit-finished"
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-10-15T19:39:13.602888+00:00"
+          }
+        },
+        "show": [
+          {
+            "at": 0,
+            "event": "Reveal the relevant question or relation; hold after speech."
+          }
+        ]
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 5.544,
+      "audio_padding_applied": "apad=pad_dur=1"
+    }
+  ]
+}

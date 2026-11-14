@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "slug": "viz-riff-variational-helium",
+    "title": "Variational Helium — Screened Nuclear Charge Z*",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "purpose": "Critique of qmcg-variational-helium: energy landscape, unit bug on Z*, rubber-stamp bound checker",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "persona": "Liam",
+    "book": "quantum-mechanics-a-companion-guide",
+    "build": {
+      "at": "2026-08-25T13:23:41",
+      "cut": "review",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Salut. Liam — in for Bear. Someone handed Claude one prompt: write me a visualization for variational helium, screened nuclear charge Z-star. Here's what came back. We're judging the viz, not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for variational helium — screened nuclear charge Z*.",
+            "greeting": "Salut, Liam",
+            "segment": "Variational Helium — Screened Nuclear Charge Z*",
+            "runningText": "building simulation…",
+            "output": [
+              "✓ Variational Helium — ⟨H⟩(Z*) energy landscape",
+              "✓ D3 CDN — four overlapping energy curves",
+              "✓ live numerical panel + slider"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 12.0,
+      "actual_duration_s": 11.43,
+      "audio_file": "mp3/beat-B00.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the viz",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "White page, two columns. Left: a D3 plot — Z-star from 0.5 to 3.0 on the x-axis, energy in Hartree on the y. Five curves: a solid red total-energy parabola, three dashed component lines for kinetic, nuclear, and electron-electron terms, and a dashed horizontal reference at the exact helium ground state. A draggable red dot rides the parabola; a vertical guide drops to the axis. Below the chart: a slider and a Minimize button. Right: a live numerical panel, a static minimum summary, and a physics console.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0.0,
+          9.2
+        ]
+      },
+      "spark_line": "describe the viz",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 full baseline",
+      "estimated_duration_s": 32.0,
+      "actual_duration_s": 29.31,
+      "audio_file": "mp3/beat-B01.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "mechanism",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "The slider drives Z-star — the effective nuclear charge in the trial wavefunction psi proportional to e to the negative Z-star r. Drag left toward 0.5: the wavefunction spreads, nuclear attraction falls, but kinetic energy falls faster — the total energy climbs steeply. Drag right past 2.0: kinetic energy grows quadratically and the total climbs again. The minimum at Z-star equals 27 over 16 is where those competing forces balance. Every component — kinetic, nuclear, electron-electron repulsion — updates live in the panel.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0.0,
+          13.6
+        ]
+      },
+      "spark_line": "drag Z*, watch",
+      "new_visual_element": "SOURCE-CUT: media/change.mp4 full Z* sweep 0.5→3.0",
+      "estimated_duration_s": 30.0,
+      "actual_duration_s": 32.3,
+      "audio_file": "mp3/beat-B02.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "what it gets right",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three things land. One: the simultaneous overlay of four curves — kinetic, nuclear, electron-electron, and total — makes the variational argument visible as geometry. You can see kinetic energy rise quadratically while nuclear attraction falls linearly; their competition determines where the minimum sits. Two: the live panel updates synchronously — at Z-star equals 1.0, kinetic energy reads exactly 1.0000 Hartree, nuclear attraction reads negative 4.0000. Spot-verifiable by hand from the closed-form expressions. Three: the hollow minimum marker pre-labels Z-star equals 27 over 16 before you drag to it. The label is a prediction, not a caption.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0.0,
+          9.0
+        ]
+      },
+      "spark_line": "what lands right",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 pros beat — full default view",
+      "estimated_duration_s": 38.0,
+      "actual_duration_s": 39.23,
+      "audio_file": "mp3/beat-B03.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "what it gets wrong",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three problems. First: Z-star in the panel is labeled Eh to the one-half — square root of Hartree. Z-star is dimensionless. Wrong unit on the central variable, every frame. Second: the bound checker — the green tag reading variational principle satisfied — can never turn red. The analytical minimum of this trial function is negative 2.8477, which is always 56 milliHartree above the exact energy. The check cannot fail by construction; students learn the bound is always guaranteed, which is a property of this one trial family, not the variational principle at large. Third: the three component curves run at opacity 0.55 in near-identical grays. On screen, kinetic from nuclear from electron-electron repulsion is barely distinguishable without the legend.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0.0,
+          13.6
+        ]
+      },
+      "spark_line": "where it breaks",
+      "new_visual_element": "SOURCE-CUT: media/change.mp4 full sweep — unit bug and dim curves visible throughout",
+      "estimated_duration_s": 44.0,
+      "actual_duration_s": 42.52,
+      "audio_file": "mp3/beat-B04.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "lead_silence_s": 0.5,
+      "narration_text": "Let's recap with Claude. Useful after the analytic derivation — shows the energy parabola, verifiable numbers, the minimum pre-marked. But Z-star is labeled with the wrong unit — Eh to the one-half on a dimensionless parameter. The bound checker always stays green, so it teaches a guarantee specific to this trial function, not the variational principle in general. The component curves are barely distinguishable. Fix the unit first.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Variational Helium — Viz Riff",
+            "artifactHeading": "VERDICT",
+            "artifactLines": [
+              "Energy parabola with verifiable component curves",
+              "Bound checker: structurally always green",
+              "Z* labeled Eh^½ — dimensionless parameter",
+              "Component curves: near-identical grays at opacity 0.55"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 20.0,
+      "actual_duration_s": 22.19,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn handoff",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Your turn. Paste this into Claude: I have a variational helium D3 simulation. Three fixes needed. First: the Z-star display appends the unit Eh to the one-half, but Z-star is a dimensionless screening parameter — remove the unit string entirely. Second: the three component curves — kinetic energy Z-star squared, nuclear attraction negative 4 Z-star, and electron-electron repulsion 5 eighths Z-star — are all opacity 0.55 in shades of gray. Assign each a distinct color and raise opacity to 0.8 so students can trace individual terms without the legend. Third: add a one-line italic note — fixed, independent of slider — to the Minimum Point panel header so first-time users know it does not track the slider. Return the minimal HTML changes for all three.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a variational helium D3 simulation. Three fixes needed. First: the Z* display appends 'Eh^½' but Z* is dimensionless — remove the unit string. Second: the three component curves (⟨T⟩=Z*², ⟨V_ne⟩=−4Z*, ⟨V_ee⟩=(5/8)Z*) are opacity 0.55 in similar grays — assign distinct colors, raise opacity to 0.8. Third: add italic '(fixed — independent of slider)' to the MINIMUM POINT header. Return minimal HTML changes for all three.",
+            "greeting": "Your turn.",
+            "segment": "Variational Helium — Screened Nuclear Charge Z*",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 44.0,
+      "actual_duration_s": 42.2,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Variational Helium — Screened Nuclear Charge Z-star. NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Variational Helium — Screened Nuclear Charge Z*",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 6.0,
+      "actual_duration_s": 4.84,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-25T13:23:41"
+      }
+    }
+  ]
+}

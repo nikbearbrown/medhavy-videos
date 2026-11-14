@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "slug": "viz-riff-zeeman-crossover",
+    "title": "Zeeman Crossover — Hydrogen 2p Manifold, Judged",
+    "topic": "Quantum Mechanics",
+    "purpose": "viz-riff critique of the Zeeman crossover energy-level diagram",
+    "skill": "viz-riff",
+    "book": "quantum-mechanics-vol3",
+    "sim_source": "humanitarians_html/public/ai1/simulations/vol3-zeeman-crossover.html",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "claude",
+    "channel": "claude-liam",
+    "register": "Teardown",
+    "folderLabel": "@NikBearBrown",
+    "build": {
+      "at": "2026-08-27T00:27:44",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "narration_text": "Hola, Liam — in for Bear. An educator asks: hey Claude, write me a visualization of the Zeeman crossover in hydrogen's 2p manifold. Here's what comes back. Today we judge the viz, not the physics.",
+      "estimated_duration_s": 12.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Hola, Liam",
+            "command": "Hey Claude, write me a visualization for the Zeeman crossover in hydrogen's 2p manifold.",
+            "segment": "Hydrogen 2p Manifold, Judged",
+            "topic": "ZEEMAN · JUDGED",
+            "runningText": "building energy-level diagram…",
+            "output": [
+              "✓ Zeeman Crossover — Hydrogen 2p Manifold",
+              "✓ 6 states, B-field slider wired (0–5 T)",
+              "✓ regime badge + live energy table"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 11.8,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "narration_text": "The chart shows six curves plotted against B field from zero to five tesla. The y-axis carries the label Energy times ten to the minus five electron-volts; ticks run from negative fifty to positive fifty as plain numbers. One curve is red at a heavier stroke weight. Three are thin solid black. Two are thin gray dashed. A red dashed vertical line marks B-critical at 0.78 tesla. Two horizontal reference lines mark the fine-structure splitting. Regime text labels near the bottom edge read Anomalous Zeeman on the left and Paschen-Back on the right. A side panel shows a color-coded regime badge and a live table of six state labels with numeric energy values. Moving dots mark each state at the current field value. A slider at the bottom controls B.",
+      "estimated_duration_s": 32.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "cut": [
+          0,
+          7.875
+        ],
+        "cut_source": "media/output.mp4",
+        "media_file": "media/B01.mp4"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B01.mp4 (output.mp4 — baseline at B=0.5T, all six states visible)",
+      "actual_duration_s": 41.64,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "narration_text": "The slider drives B from zero to five tesla. At each position the code calls computeEigenvalues — an analytic two-by-two diagonalization in the m-j equals plus or minus one-half blocks. The six dots update instantly. At B-critical the side panel badge flips from cream to red: the code tests whether B is less than Bc for the anomalous Zeeman regime and greater for Paschen-Back. The question the viewer is supposed to answer: watch the curves fan out — do the j equals one-half and j equals three-halves states fully separate in the strong-field limit?",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "cut": [
+          0,
+          11.583
+        ],
+        "cut_source": "media/change.mp4",
+        "media_file": "media/B02.mp4"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B02.mp4 (change.mp4 — full B sweep 0→5T, badge flips at Bc)",
+      "actual_duration_s": 30.31,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "narration_text": "Three things work. First: the crossover threshold is made unavoidable by three co-operating encodings — the red vertical line at Bc, the badge that switches color at that exact moment, and the regime text in the background. A student cannot miss that something changes at 0.78 tesla. Second: the dashed lines for j equals one-half states map the j quantum number to a perceptual channel beyond color, so the two spin-orbit families stay visually separable even for a viewer with color deficiency. Third: the live numeric table acts as a calculator — set a specific B value, read exact energies, check them against the equation.",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "cut": [
+          0,
+          6.0
+        ],
+        "cut_source": "media/change.mp4",
+        "media_file": "media/B03.mp4",
+        "note": "CALLOUT OVERLAY (final pass): ring the Bc vertical line, circle badge at flip moment"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B03.mp4 (change.mp4 t=0–6s — crossover approach, badge flip at ~1.8s)",
+      "actual_duration_s": 35.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHAT IT GETS WRONG",
+      "narration_text": "Three problems. Most dangerous: the y-axis ticks show bare numbers — minus twenty-five, plus fifty — and the exponent lives only in the axis label as a tiny prefix. A student who skims past that prefix thinks these are electron-volt-scale energies, five orders of magnitude wrong. The fix: put the unit directly on each tick. Second: the five non-red curves have no labels on the chart itself. In the Paschen-Back regime you cannot identify any line without memorizing the side panel table. Third: the side panel keeps j and m-j labels at five tesla, where the good quantum numbers are m-l and m-s. The visualization teaches the wrong eigenbasis across the majority of its slider range.",
+      "estimated_duration_s": 32.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "cut": [
+          5.5,
+          11.583
+        ],
+        "cut_source": "media/change.mp4",
+        "media_file": "media/B04.mp4",
+        "note": "CALLOUT OVERLAY (final pass): circle y-axis exponent label, point at unlabeled curves, highlight |j,mj⟩ labels in panel"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B04.mp4 (change.mp4 t=5.5–11.5s — deep Paschen-Back, fanned curves, wrong state labels)",
+      "actual_duration_s": 38.57,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Let's recap with Claude. Clear threshold encoding: Bc is marked three ways and cannot be missed. Dual-channel legend — dash encodes j, not just color — so the families stay separable. But y-axis ticks that hide their exponent. No on-chart curve labels past the red line. State labels that use the wrong quantum numbers above Bc. Best use: show this in lecture at the phase-transition moment. One fix matters most: put the exponent on each tick so the energy scale is honest at first glance.",
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "static",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Zeeman Crossover Viz — Verdict",
+            "artifactHeading": "When to use it, and what to fix.",
+            "artifactLines": [
+              "Three-way Bc encoding: line + badge + label. Unavoidable.",
+              "Dash-encodes j family — separable without color.",
+              "Y-axis ticks hide the ×10⁻⁵ exponent. Five orders of magnitude wrong.",
+              "One fix: put the exponent on each tick."
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 26.62,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "YOUR TURN",
+      "narration_text": "Your turn. I have a D3 visualization of the Zeeman crossover in hydrogen's 2p manifold. I need three fixes. One: rescale the y-axis so each tick shows its value directly in units of ten to the minus five eV — for example minus 2.25 — rather than raw-domain numbers that require a hidden exponent in the axis label. Two: in the Paschen-Back regime above Bc, relabel each curve on the chart with its dominant m-l and m-s quantum numbers rather than j and m-j. Three: add hover labels to each of the six curves so a student can identify any line without consulting the side panel. Keep the single-file D3 format and return the modified HTML.",
+      "estimated_duration_s": 32.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "type",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "command": "I have a D3 visualization of the Zeeman crossover in hydrogen's 2p manifold. Fix three things. One: rescale the y-axis so each tick shows the value in units of 10⁻⁵ eV directly (e.g. −2.25) — not raw-domain numbers that need a hidden exponent. Two: in the Paschen-Back regime (B > Bc), relabel each curve on the chart with its dominant mₗ, mₛ quantum numbers instead of j, mⱼ. Three: add hover labels to all six curves so a student can identify any line without the side panel. Keep single-file D3 format.",
+            "segment": "Hydrogen 2p Manifold, Judged",
+            "topic": "ZEEMAN · JUDGED",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 38.27,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "Zeeman Crossover — weak field to Paschen-Back, judged. Liam, in for Bear.",
+      "estimated_duration_s": 6.0,
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "motion": "static",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Zeeman Crossover — Hydrogen 2p Manifold, Judged",
+            "handle": "@NikBearBrown",
+            "slug": "viz-riff-zeeman-crossover",
+            "mascotAnimation": "wave"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "actual_duration_s": 4.89,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T00:27:44"
+      }
+    }
+  ]
+}

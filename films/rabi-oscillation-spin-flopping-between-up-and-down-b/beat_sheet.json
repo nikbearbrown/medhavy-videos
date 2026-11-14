@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "slug": "viz-riff-rabi-oscillation-short",
+    "title": "Rabi Oscillation — Spin Flopping Between Up and Down",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "purpose": "Critique of the qm2-rabi-oscillation D3 sim: dual-chart encoding, two fixable bugs",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "persona": "Liam",
+    "book": "quantum-mechanics-vol2",
+    "build": {
+      "at": "2026-08-29T14:45:59",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    },
+    "aspect_ratio": "9:16",
+    "fit": "crop",
+    "kind": "short",
+    "reformat": "center-cut, focus-aware; pantry/<bid>-916.* is the human replacement slot; -916 overrides honored",
+    "derived_from": "viz-riff-rabi-oscillation",
+    "dropped_beats": [
+      "B04"
+    ],
+    "playlist_short": "Shorts",
+    "total_estimated_duration_seconds": 175.6
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Salut. Liam — in for Bear. Someone handed Claude one prompt: write me a visualization for Rabi oscillation, spin flipping between up and down. Here's what came back. We're judging the viz, not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "command": "Hey Claude, write me a visualization for Rabi oscillation — spin flipping between up and down.",
+            "greeting": "Salut, Liam",
+            "segment": "Rabi Oscillation — Spin Flopping Between Up and Down",
+            "runningText": "building simulation…",
+            "output": [
+              "✓ Rabi Oscillation — P↑(t) = cos²(ω₀t/2)",
+              "✓ D3 CDN — dual-chart layout",
+              "✓ Bloch sphere + probability trace"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 14.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 11.48,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the viz",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "White page, two charts. Left: Spin Probability vs Time — P↑ in blue and P↓ in gray, both oscillating between zero and one over four microseconds. A red dashed time marker advances in real time, colored dots riding each curve. Right: a circle labeled Bloch sphere, a red state-vector arrow sweeping its boundary, leaving a faint trace. Above: two sliders — Rabi frequency and initial polar angle — a play button, and a live readout of P↑, P↓, their sum, and the period.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0.0,
+          9.0
+        ]
+      },
+      "spark_line": "describe the viz",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 full baseline",
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 28.37,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "mechanism",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Drag the Rabi frequency slider from one megahertz up to five. The oscillation accelerates: period drops from 1.0 to 0.2 microseconds in the readout, the background curves compress, the Bloch arrow spins faster. The equation being animated is P↑(t) equals cosine-squared of omega-zero t over two. The prediction the sim asks you to test: at twice the frequency, does the spin flip twice as fast? Yes. Every element confirms it.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0.0,
+          12.0
+        ]
+      },
+      "spark_line": "drag omega, watch",
+      "new_visual_element": "SOURCE-CUT: media/change.mp4 full omega sweep",
+      "estimated_duration_s": 24.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 23.66,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "what it gets right",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three things land. One: the subtitle front-loads the physics contract before the animation runs — deterministic spin flip, no measurement, no collapse. That single line rules out the most common misread of Rabi as a collapse event. Two: the P↑ plus P↓ readout holds at 1.0000 regardless of what you drag. Unitarity isn't implied — it's verified live. Three: both charts run simultaneously — probability over time and the Bloch sphere. Same oscillation, two representations, synchronized time marker. Students can build one picture and check it against the other.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          1.0,
+          6.0
+        ]
+      },
+      "spark_line": "what lands right",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 mid-animation (pros beat)",
+      "estimated_duration_s": 30.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 32.6,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "lead_silence_s": 0.5,
+      "narration_text": "Let's recap with Claude. Useful for day-one NMR. Deterministic spin flip shown in two representations. Unitarity held as a live invariant. But the x-axis lies when omega changes, and the Bloch sphere labels the wrong plane. Fix those two — one class attribute, one label string — and this becomes a clean demonstration.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Rabi Oscillation — Viz Riff",
+            "artifactHeading": "VERDICT",
+            "artifactLines": [
+              "Deterministic spin flip in two representations",
+              "Unitarity readout: always 1.0000",
+              "x-axis labels freeze above 1 MHz",
+              "Bloch sphere: wrong plane, wrong eigenstate label"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 18.22,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn handoff",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Your turn. Paste this into Claude: I have a Rabi oscillation D3 simulation with two bugs. First, the x-axis tick labels freeze when the Rabi frequency slider moves — the axis group was never given the CSS class the remove selector expects. Fix: add .attr class x-axis on creation and rebind the axis on each input event. Second, the Bloch sphere is labeled x–z plane but the trajectory lives in y–z under H equals omega-zero S-x. Fix: change the plane label to y–z and the equator marker from |+⟩ to |+y⟩. Return only the corrected lines of code with enough context to place them.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "command": "I have a Rabi oscillation D3 simulation with two bugs. First, the x-axis tick labels freeze when the Rabi frequency slider moves — the axis group was never given the CSS class the remove selector expects. Fix: add .attr('class', 'x-axis') on creation and rebind the axis on each input event. Second, the Bloch sphere is labeled x–z plane but the trajectory lives in y–z under H=ω₀S_x. Fix: change the plane label to y–z and the equator marker from |+⟩ to |+y⟩. Return only the corrected lines of code with enough context to place them.",
+            "greeting": "Your turn.",
+            "segment": "Rabi Oscillation — Spin Flopping Between Up and Down",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 38.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 34.77,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "That's the short version. The full video also covers Two bugs. First: drag omega… — watch Rabi Oscillation — Spin Flopping Between Up and Down for the whole story. The link is right below.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Rabi Oscillation — Spin Flopping Between Up and Down",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 6.0,
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 11.05,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      },
+      "short_outro_rewritten": true
+    },
+    {
+      "beat_id": "BEND",
+      "narration_text": "",
+      "actual_duration_s": 4.5,
+      "audio_file": "mp3/beat-BEND.mp3",
+      "shot": {
+        "type": "VIDEO",
+        "source": "own"
+      },
+      "card": {
+        "handle": "@nikbearbrown",
+        "next": "",
+        "silent": true
+      },
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BEND.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T14:45:59"
+      },
+      "media": {
+        "file": "media/BEND.mp4",
+        "cut": [
+          0.0,
+          5.5
+        ]
+      }
+    }
+  ]
+}

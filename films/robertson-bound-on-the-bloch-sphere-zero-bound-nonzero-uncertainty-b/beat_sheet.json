@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "slug": "viz-riff-robertson-bloch-heatmap-short",
+    "title": "Robertson Bound on the Bloch Sphere — Zero Bound, Nonzero Uncertainty",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "purpose": "Riff critique of the Robertson bound / actual sigma product D3 heatmap from QM vol 2",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "channel": "claude-liam",
+    "persona": "Liam",
+    "build": {
+      "at": "2026-08-27T14:14:40",
+      "cut": "master",
+      "filled": 6,
+      "of": 7,
+      "slates": [
+        "BEND"
+      ],
+      "skin_warnings": []
+    },
+    "aspect_ratio": "9:16",
+    "fit": "crop",
+    "kind": "short",
+    "reformat": "center-cut, focus-aware; pantry/<bid>-916.* is the human replacement slot; -916 overrides honored",
+    "derived_from": "viz-riff-robertson-bloch-heatmap",
+    "dropped_beats": [
+      "BHTF",
+      "B04"
+    ],
+    "playlist_short": "Shorts",
+    "total_estimated_duration_seconds": 148.69
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "COLD OPEN",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Konnichiwa. I'm Liam, in for Bear. This is the Robertson uncertainty bound visualized on the Bloch sphere — a D3 heat map that shows what happens to the uncertainty product as a quantum state moves from pole to equator. We are not judging the spin mechanics. We are judging the visualization.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk916",
+          "props": {
+            "command": "Hey Claude, write me a visualization for the Robertson uncertainty bound on the Bloch sphere.",
+            "greeting": "Konnichiwa, Liam",
+            "runningText": "building heatmap…",
+            "output": [
+              "✓ Bloch sphere Mercator heatmap — φ/θ grid, RdBu color scale",
+              "✓ click-to-inspect tooltip at any (φ,θ) point",
+              "✓ Robertson bound vs actual σ product, two commutator pairs",
+              "✓ D3 v7, single-file HTML"
+            ],
+            "segment": "Robertson Bound · Bloch Sphere",
+            "sparkLine": "judge the viz"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 16.32,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T14:14:40"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "THE VIZ",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two panels side by side. On the left, a Mercator projection of the Bloch sphere: azimuthal angle phi on the horizontal axis, polar angle theta on the vertical, colored from red at the poles to blue at the equatorial band. On the right, two curves over theta, fixed at phi equals forty-five degrees. Four toggle buttons switch between the Robertson bound and the actual sigma product, and between two commutator pairs. Click any cell and the tooltip reports both values.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B01.mp4 (output.mp4 full clip — baseline Robertson Bound heatmap)",
+      "estimated_duration_s": 12.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 25.41,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T14:14:40"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "THE MECHANISM",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "The View toggle rewrites the heatmap. Robertson Bound mode: pure latitude stripes, no phi structure — the bound for the S-x S-y pair depends only on theta. Actual Sigma Product mode: four blue notches appear at the equator at phi equals zero, ninety, one-eighty, and two-seventy degrees. Those are the states where S-x or S-y has zero variance. Clicking a near-equatorial cell in Robertson Bound mode surfaces the key number: bound equals zero-point-zero-zero-seven, actual equals zero-point-one-two.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "SOURCE-CUT: media/B02.mp4 (change.mp4 full clip — interactive toggle + click-through)",
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 29.53,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T14:14:40"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT GETS RIGHT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two things this visualization earns. First: the Mercator projection is the correct abstraction. The actual sigma product varies with phi — you cannot see that on a three-D sphere where perspective hides the azimuthal structure. The flat grid makes both axes scannable at once. Second: the click-to-inspect tooltip. It reports the Robertson bound and the actual value at any point and flags the critical case with the label: bound equals zero but actual not zero. The discrepancy is numerical, not inferred.",
+      "shot": {
+        "type": "STILL",
+        "source": "capture",
+        "motion": "static"
+      },
+      "new_visual_element": "STILL: media/B03.png (change.mp4@9.0s — Actual σ Product view, butterfly φ-structure visible)",
+      "estimated_duration_s": 18.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 26.99,
+      "build": {
+        "status": "STILL",
+        "src": "media/B03.png",
+        "filled_by": "still",
+        "at": "2026-08-27T14:14:40"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Let's recap with Claude. The Mercator projection earns its keep — the phi structure in the actual sigma product is only visible in a two-D grid. The click tooltip delivers the discrepancy numerically. But two things need fixing: the static text card states h-bar-squared over four everywhere, which the heatmap itself disproves. And the curve panel locks phi at forty-five degrees with no control — the informative slice is the only slice, and that is not the complete picture.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact916",
+          "props": {
+            "artifactTitle": "Viz Verdict",
+            "artifactHeading": "Robertson Bound on the Bloch Sphere",
+            "artifactLines": [
+              "Mercator projection — right call; φ-structure only visible in a 2D grid",
+              "click-to-inspect tooltip — discrepancy is numerical, not inferred",
+              "static text claims ħ²/4 everywhere — the heatmap disproves this.",
+              "curve panel locks φ=45°; the φ=0° story is invisible"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 16.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 24.94,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T14:14:40"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "That's the short version. The full video also covers Two things the visualization hides.… and robertson bound · bloch sphere — watch Robertson Bound on the Bloch Sphere — Zero Bound, Nonzero Uncertainty for the whole story. The link is right below.",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro916",
+          "props": {
+            "title": "Robertson Bound on the Bloch Sphere — Zero Bound, Nonzero Uncertainty.",
+            "slug": "viz-riff-robertson-bloch-heatmap",
+            "handle": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "tail_silence_s": 1.0,
+      "estimated_duration_s": 5.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-27T14:14:40"
+      },
+      "short_outro_rewritten": true
+    },
+    {
+      "beat_id": "BEND",
+      "narration_text": "",
+      "actual_duration_s": 4.5,
+      "audio_file": "mp3/beat-BEND.mp3",
+      "shot": {
+        "type": "SLATE",
+        "source": "own",
+        "motion": "hold",
+        "treatment": "none"
+      },
+      "card": {
+        "handle": "@nikbearbrown",
+        "next": "",
+        "silent": true
+      },
+      "build": {
+        "status": "SLATE",
+        "src": null,
+        "filled_by": null,
+        "at": "2026-08-27T14:14:40",
+        "needs": "SCRIPTING GAP — BEND has no drawable spec. Author a diagram, a Remotion pattern, or a Manim scene. Do not fill this with generated media."
+      }
+    }
+  ]
+}

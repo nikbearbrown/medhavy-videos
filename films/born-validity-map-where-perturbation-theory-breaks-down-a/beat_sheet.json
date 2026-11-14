@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "slug": "viz-riff-born-validity-map",
+    "title": "Born Validity Map — Where Perturbation Theory Breaks Down",
+    "topic": "CLAUDE · VIZ-RIFF",
+    "purpose": "Critique of the vol3-born-validity-map D3 sim: log-log encoding right, Boolean validity and fabricated resonance curve wrong",
+    "clock": "narration",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "folderLabel": "@NikBearBrown",
+    "persona": "Liam",
+    "book": "quantum-mechanics-vol3",
+    "build": {
+      "at": "2026-08-29T15:06:17",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Hola. Liam — in for Bear. Someone handed Claude one prompt: write me a visualization for Born approximation validity in quantum scattering. Here's what came back. We're judging the viz, not the physics.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "Hey Claude, write me a visualization for Born approximation validity in quantum scattering.",
+            "greeting": "Hola, Liam",
+            "segment": "Born Validity Map — Where Perturbation Theory Breaks Down",
+            "runningText": "building validity map…",
+            "output": [
+              "✓ Born Approximation Validity Map",
+              "✓ D3 log-log validity grid — Yukawa potential",
+              "✓ two sliders wired — ka and ξ"
+            ],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 13.0,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 11.52,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the viz",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "White page, two panels. Left: a log-log grid — ka along the bottom from zero-point-one to thirty, dimensionless potential strength up the side, same range. Tan cells mark where Born converges; pink-red cells where it breaks down. Two dashed lines cross the grid — a diagonal at ka equals xi, a horizontal at xi equals one. A red crosshair sits at the current parameters. Right: the angular distribution, differential cross section normalized to its value at one degree, theta from zero to one-eighty. A black Born curve. Beneath: two sliders, a live YES-slash-NO verdict in green or red, and a four-decimal ratio of backward to forward scattering.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          0.0,
+          6.0
+        ]
+      },
+      "spark_line": "describe the viz",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 full baseline",
+      "estimated_duration_s": 40.0,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 37.16,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "mechanism",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Drag ka from low to high. At low ka — the crosshair deep in the pink zone — Born valid reads NO. The angular distribution is nearly flat: the ninety-to-one-degree ratio sits above sixty percent. The physics is correct: long wavelength means s-wave dominance, nearly isotropic scattering. But in that same region the sim also draws a red dashed resonance hint. Drag further: the crosshair crosses the diagonal, the readout snaps to green YES, and the angular curve sharpens into a forward spike. Two things are happening in the sweep — one is physics, one is a choice we'll come back to.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          0.0,
+          11.5
+        ]
+      },
+      "spark_line": "drag ka, watch both",
+      "new_visual_element": "SOURCE-CUT: media/change.mp4 full ka sweep",
+      "estimated_duration_s": 35.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 31.21,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "what it gets right",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Three things land right. First: log-log is the correct scale for this boundary. The Born conditions — xi less than one, or ka greater than xi — are multiplicative relationships. In log-log space both boundaries are straight lines. The diagonal and the horizontal land exactly where the math says. A linear scale would bury the low-ka, low-xi corner where most interesting behavior lives. Second: the crosshair links both panels simultaneously. Move one slider — the dot moves on the map and the curve redraws in the angle panel. No tab switching. Third: the YES-slash-NO color readout makes the phase transition tactile. The color flips at the boundary — not in a tooltip, but in the readout line where your eye already is.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/output.mp4",
+        "cut": [
+          1.0,
+          5.0
+        ]
+      },
+      "spark_line": "what lands right",
+      "new_visual_element": "SOURCE-CUT: media/output.mp4 steady default (pros beat)",
+      "estimated_duration_s": 45.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 39.36,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "what it gets wrong",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Two things to fix. First: the validity boundary is a hard Boolean. The code checks xi less than one OR ka greater than xi and colors every failing cell the same pink. But perturbation theory fails by degree. A point just past the diagonal is mildly suspect. A point ten times deeper is wildly broken. There is no gradient to show this. Replace the binary color with a continuous scale — color each cell by the perturbation ratio — and the map becomes an argument instead of a verdict. Second: in the unreliable region the sim draws a resonance-enhanced cross-section curve. That curve is not computed from quantum mechanics. It is Born times an ad-hoc Lorentzian bump, re-normalized. The label says the Born series has broken down, then draws a curve anyway. Students will treat it as ground truth. Delete it.",
+      "shot": {
+        "type": "SCREEN",
+        "source": "capture"
+      },
+      "media": {
+        "file": "media/change.mp4",
+        "cut": [
+          2.0,
+          5.0
+        ]
+      },
+      "spark_line": "two things wrong",
+      "new_visual_element": "SOURCE-CUT: media/change.mp4 low-ka segment (Born NO, flat distribution)",
+      "estimated_duration_s": 54.0,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 42.97,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "verdict",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "lead_silence_s": 0.5,
+      "narration_text": "Let's recap with Claude. Log-log scale: the right call for a multiplicative validity boundary — geometry reveals geometry. Crosshair synchronization: one slider move, two consequences, no bookkeeping. Boolean YES-slash-NO: erases the gradient — Born breaks down by degree, not by step. Resonance hint: fabricated physics drawn with the authority of a real curve. The one fix that matters: replace the binary color grid with a continuous perturbation scale. That change turns a pass-fail stamp into a physical argument.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Born Validity Map — Viz Riff",
+            "artifactHeading": "VERDICT",
+            "artifactLines": [
+              "Log-log scale: correct encoding for a multiplicative boundary",
+              "Crosshair links both panels — one move, two consequences",
+              "Boolean YES/NO erases the gradient — Born fails by degree",
+              "Resonance hint: fabricated physics with the authority of a real curve"
+            ]
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 28.0,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 28.07,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn handoff",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Your turn. I have a Born Approximation Validity Map for the Yukawa potential, built in D3 on a log-log grid. The validity region is currently colored binary — pink or tan, nothing in between. Do three things: one, replace the binary coloring with a continuous color scale where each cell's color encodes the perturbation ratio xi over max of one comma ka — near-white for well-converged, saturated red for deeply invalid; two, remove the resonance hint curve and its label entirely, and add a static text note in the unreliable region reading partial-wave analysis required; three, add a thin contour line at xi equals one and at ka equals xi using a darker ink tone, distinct from the current dashed lines. Keep both sliders and the YES-slash-NO readout. Single HTML file, D3 from CDN.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "command": "I have a Born Approximation Validity Map for the Yukawa potential V = V₀ e⁻ʳ/r, built in D3 on a log-log grid. Do three things: (1) replace the binary pink/tan coloring with a continuous color scale where each cell encodes ξ/max(1,ka) — near-white for well-converged, saturated red for deeply invalid; (2) remove the resonance hint curve and label entirely, add static text 'partial-wave analysis required' in the unreliable region; (3) add a thin contour line at ξ=1 and ka=ξ in darker ink, distinct from the existing dashed lines. Keep both sliders and the YES/NO readout. Single HTML file, D3 from CDN.",
+            "greeting": "Your turn.",
+            "segment": "Born Validity Map — Where Perturbation Theory Breaks Down",
+            "runningText": "paste this into Claude…",
+            "output": [],
+            "folderLabel": "@NikBearBrown"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 48.0,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 44.74,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "narration_text": "Born Validity Map — Where Perturbation Theory Breaks Down. NikBearBrown.",
+      "shot": {
+        "type": "REMOTION",
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Born Validity Map — Where Perturbation Theory Breaks Down",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": ""
+          }
+        }
+      },
+      "estimated_duration_s": 6.0,
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.65,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-08-29T15:06:17"
+      }
+    }
+  ]
+}
